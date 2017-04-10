@@ -8,7 +8,7 @@ header: |
     <p>
       <a class="btn btn-md btn-success" href="http://www.ontobee.org/ontology/OBI" role="button">Browse OBI</a>
       <a class="btn btn-md btn-success" href="http://purl.obolibrary.org/obo/obi.owl" role="button">Download OBI</a>
-      <a class="btn btn-md btn-success" href="https://github.com/obi-ontology" role="button">View on Github</a>
+      <a class="btn btn-md btn-success" href="https://github.com/obi-ontology/obi" role="button">View on Github</a>
     </p>
   </div>
 ---
@@ -37,10 +37,21 @@ By using OBI terms when you collect your data, you benefit from the careful defi
 Please cite [The Ontology for Biomedical Investigations](https://www.ncbi.nlm.nih.gov/pubmed/27128319), PLoS One. 2016 Apr 29;11(4):e0154556. doi: 10.1371/journal.pone.0154556. eCollection 2016.
 
 
+## Request a Term
+
+Please use our GitHub issue tracker to request a term: <https://github.com/obi-ontology/obi/issues>
+
+
+## Report a Problem
+
+Please use our GitHub issue tracker to report a problem with OBI: <https://github.com/obi-ontology/obi/issues>
+
+
 ## Contact Us
 
 - OBI users mailing list [obi-users@googlegroups.com](mailto:obi-users@googlegroups.com) on [Google Groups](https://groups.google.com/forum/#!forum/obi-users).
 - OBI developers mailing list [obi-devel@lists.sourceforge.net](mailto:obi-devel@lists.sourceforge.net)
+- issue tracker: <https://github.com/obi-ontology/obi/issues>
 - weekly conference call, Mondays at 9:00 AM Pacific, 12:00 noon Eastern
     - Zoom web conference <https://zoom.us/j/413455110>
     - by phone: +1 408 638 0968 (US Toll) or +1 646 558 8656 (US Toll), Meeting ID: 413 455 110, [International numbers available](https://zoom.us/zoomconference?m=uZzil3tDILQBl9cIfYBdogI-bibyKJE4)
