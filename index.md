@@ -39,7 +39,7 @@ Please cite [The Ontology for Biomedical Investigations](https://www.ncbi.nlm.ni
 
 ## Request a Term
 
-Please use our GitHub issue tracker to request a term: <https://github.com/obi-ontology/obi/issues>
+Please see our [term guidelines](/page/OBI_term_guidelines) for information on how to request a new term, or request changes to an existing term.
 
 
 ## Report a Problem
