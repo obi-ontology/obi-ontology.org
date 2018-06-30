@@ -53,8 +53,8 @@ Please use our GitHub issue tracker to report a problem with OBI: <https://githu
 - OBI developers mailing list [obi-devel@lists.sourceforge.net](mailto:obi-devel@lists.sourceforge.net)
 - issue tracker: <https://github.com/obi-ontology/obi/issues>
 - weekly conference call, Mondays at 9:00 AM Pacific, 12:00 noon Eastern
-    - Zoom web conference <https://zoom.us/j/413455110>
-    - by phone: +1 408 638 0968 (US Toll) or +1 646 558 8656 (US Toll), Meeting ID: 413 455 110, [International numbers available](https://zoom.us/zoomconference?m=uZzil3tDILQBl9cIfYBdogI-bibyKJE4)
+    - Zoom web conference <https://zoom.us/j/438753421>
+    - by phone: +1 408 638 0968 (US Toll) or +1 646 558 8656 (US Toll), Meeting ID: 438 753 421, [International numbers available](https://zoom.us/u/MQm7aCi0)
     - [weekly agenda Google Doc](https://docs.google.com/document/d/1eEutJAG56gncTsWf2sAqHa4a9pQAuCbhsg_kmbF78tw/edit#heading=h.5bzhi4qntq5l)
 
 
