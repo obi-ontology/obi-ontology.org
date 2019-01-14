@@ -32,9 +32,9 @@ An ontology is a system of carefully defined terminology, connected by logical r
 By using OBI terms when you collect your data, you benefit from the careful definitions, and can use the logical network to enrich search and analysis. By using OBI terms when you share your data, you make it easy for others to understand your work, and integrate it with their own datasets that use OBI and OBO terminology.
 
 
-## Cite OBI
+## Documentation
 
-Please cite [The Ontology for Biomedical Investigations](https://www.ncbi.nlm.nih.gov/pubmed/27128319), PLoS One. 2016 Apr 29;11(4):e0154556. doi: 10.1371/journal.pone.0154556. eCollection 2016.
+The [OBI Wiki](https://github.com/obi-ontology/obi/wiki) includes documentation on the use and development of OBI. Like OBI, the wiki is under development and we encourage contributions.
 
 
 ## Request a Term
@@ -47,6 +47,11 @@ Please see our [term guidelines](/page/OBI_term_guidelines) for information on h
 Please use our GitHub issue tracker to report a problem with OBI: <https://github.com/obi-ontology/obi/issues>
 
 
+## Cite OBI
+
+Please cite [The Ontology for Biomedical Investigations](https://www.ncbi.nlm.nih.gov/pubmed/27128319), PLoS One. 2016 Apr 29;11(4):e0154556. doi: 10.1371/journal.pone.0154556. eCollection 2016.
+
+
 ## Contact Us
 
 - OBI users mailing list [obi-users@googlegroups.com](mailto:obi-users@googlegroups.com) on [Google Groups](https://groups.google.com/forum/#!forum/obi-users).
@@ -56,5 +61,3 @@ Please use our GitHub issue tracker to report a problem with OBI: <https://githu
     - Zoom web conference <https://zoom.us/j/438753421>
     - by phone: +1 408 638 0968 (US Toll) or +1 646 558 8656 (US Toll), Meeting ID: 438 753 421, [International numbers available](https://zoom.us/u/MQm7aCi0)
     - [weekly agenda Google Doc](https://docs.google.com/document/d/1eEutJAG56gncTsWf2sAqHa4a9pQAuCbhsg_kmbF78tw/edit#heading=h.5bzhi4qntq5l)
-
-
