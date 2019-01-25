@@ -23,36 +23,43 @@
   </head>
   <body>
 
-    <div class="container">
+      <header style="width:170px; float: left">
+        <a href="/"> <h1 align="right">OBI</h1> </a>
+        <p align="right">
+          - - - - - - - - - -<br>
+          <a href="/term-guidelines">Term Guidelines</a><br>
+          <a href="/docs">Documentation</a><br>
+          <a href="/projects">Projects</a><br>
+          <a href="/media">Media</a><br>
+          <b>OBI Core</b><br>
+          <a href="/docs/core-model/">Core Model</a><br>
+          <a href="/docs/core-classes/">Core Classes</a><br>
+          <b>Data Modelling</b><br>
+          <a href="/docs/data-intro/">Introduction</a></br>
+          <a href="/docs/vs-vs-dp/">Value Specs vs Data Properties</a><br>
+          <a href="/docs/time-stamped-datums/">Time-stamped Data</a><br>
+          <b>Data Types</b><br>
+          <a href="/docs/data-types/">Introduction</a><br>
+          <a href="/docs/data-numeric/">Numeric</a><br>
+          <a href="/docs/data-string/">String</a><br>
+          <a href="/docs/data-categorical/">Categorical</a><br>
+          <a href="/docs/data-boolean/">Boolean</a><br>
+          <a href="/docs/data-time/">Date, Time, Duration</a><br>
+        </p>
+      </header>
 
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/#cite-obi">Cite OBI</a></li>
-            <li role="presentation"><a href="/page/OBI_term_guidelines">Term Requests</a></li>
-            <li role="presentation"><a href="/#contact-us">Contact Us</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted"><a href="/">OBI</a></h3>
+      <div style="width: 730px; margin-left: 200px">
+        <h1>{{ page.header }}</h1>
+        <div>
+          {{ content }}
+        </div>
       </div>
 
-      {{ page.header }}
-
-      <div class="row main-content">
-        {{ content }}
-      </div>
+      <br style="clear: both">
 
       <footer class="footer">
-        <p>&copy; 2018 OBI</p>
+        <p>&copy; 2019 OBI</p>
       </footer>
 
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-    {{ page.scripts }}
   </body>
 </html>

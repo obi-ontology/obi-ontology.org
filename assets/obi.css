@@ -6,6 +6,10 @@ body {
   padding-bottom: 20px;
 }
 
+img {
+  max-width: 730px;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .main-content,

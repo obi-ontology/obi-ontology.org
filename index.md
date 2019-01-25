@@ -6,9 +6,9 @@ header: |
     <h1>Ontology for Biomedical Investigations</h1>
     <p class="lead">Community Standard for Scientific Data Integration</p>
     <p>
-      <a class="btn btn-md btn-success" href="http://www.ontobee.org/ontology/OBI" role="button">Browse OBI</a>
-      <a class="btn btn-md btn-success" href="http://purl.obolibrary.org/obo/obi.owl" role="button">Download OBI</a>
-      <a class="btn btn-md btn-success" href="https://github.com/obi-ontology/obi" role="button">View on Github</a>
+      <a class="btn btn-md btn-info" href="http://www.ontobee.org/ontology/OBI" role="button">Browse OBI</a>
+      <a class="btn btn-md btn-info" href="http://purl.obolibrary.org/obo/obi.owl" role="button">Download OBI</a>
+      <a class="btn btn-md btn-info" href="https://github.com/obi-ontology/obi" role="button">View on Github</a>
     </p>
   </div>
 ---
