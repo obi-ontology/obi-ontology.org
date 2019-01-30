@@ -10,3 +10,5 @@ A preview of this new site is avaiable: <https://obi-ontology.github.io/obi-onto
 ## License
 
 Content is available under [CC-BY 3.0 Unported](http://creativecommons.org/licenses/by/3.0/) unless otherwise noted.
+
+*edit from MAM*
