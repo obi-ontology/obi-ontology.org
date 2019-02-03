@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: "Projects that use OBI"
 permalink: /projects/
 ---
