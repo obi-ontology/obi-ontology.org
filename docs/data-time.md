@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: Date, Time, and Duration
 permalink: /docs/data-time/
 toc: true

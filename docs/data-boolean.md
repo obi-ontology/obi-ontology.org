@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: Boolean Datum
 permalink: /docs/data-boolean/
 toc: true

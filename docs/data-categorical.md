@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: Categorical Datum
 permalink: /docs/data-categorical/
 toc: true
@@ -7,43 +7,47 @@ sidebar:
   nav: "docs"
 ---
 
-A categorical value specification is a flat list or hierarchic tree structure containing a finite number of pre-determined choices. Here we provide for choices whose values are either xsd:string or xsd:anyURI references to ontology terms.
+A categorical value is a selection from a flat list or hierarchic tree structure containing a finite number of pre-determined choices ranging from organisms in a taxonomy, diseases, countries of the world or levels of an experimental variable.  Here we provide for choices whose values are either ontology terms, or a controlled set of literal xsd:string strings.
 
 ### Categorical ontology choice
 
-Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, of disease, etc.) are often used in datums and experimental metadata. The aim here is to point to existing ontology class or instance identifiers within existing ontologies as selections for a categorical variable. 
+The aim here is to provide a way to point to an ontology class or instance identifiers within existing ontologies as selections for a categorical variable.
+
+<img align="right" src="/assets/images/docs/data_john_sex_property.png">
+
+The 'has quality' relation can capture this directly by pointing straight to the phenotypic quality, for example "male" is a subclass of "phenotypic sex", and one can express "An anonymous node of type Homo sapiens (representing John) 'has quality' another anonymous node of type 'male'".
+
+<br clear="both">
+
+One can detail which assay was used to make this assessment:
+
+<img src="/assets/images/docs/data_john_sex_process.png">
+
+<img align="right" src="/assets/images/docs/data_john_sex_vs.png">
+
+A categorical value specification can point to the possible choices (which will vary depending on experimental protocol):
+
+<br clear="both">
+
+The complete contextual view:
+
+<img src="/assets/images/docs/data_john_sex_context.png">
 
 In a different approach, an OBI example using categorical value specification focuses on describing a tumor grading standard [`histologic grade according to AJCC 7th edition`](http://purl.obolibrary.org/obo/OBI_0002205){:target="_blank"}.  Here the value specification class has individuals which are each interpreted as grades, and which could potentially be augmented with data properties that detail their assessment differentiae.  This approach is suited to cases where selections are not already established (and would not be in the future) as ontology classes situated within their own hierarchic context. 
 
-Alternately one could use the `specifies value of` relation to point to existing categorical choices (qualities, etc.):
-<!-- 
-[//]: # (        subClassOf 'categorical ontology value specification')
--->
+## Complications - punning
+
+A left/right/ambidextrous handedness example shows some complications one can run into visa vis classes and instances / individuals.
 
     Class: 'handedness value specification'
         subClassOf 'categorical value specification'
         subClassOf 'specifies value of' only handedness
 
-Now an instance of `handedness value specification` can have a **`specifies value of`** axiom pointing to a `handedness` class instance. This involves some extra setup because all `handedness` selections need to be "**punned**" since they can't be referenced directly as classes. In other words an individual needs to be created to mirror each categorical choice, so for example classes for left handedness, right handedness, ambidextrous handedness all need mirrored individuals - and in this case these are not native to the PATO ontology that the classes originate from. (Punning is accomplished manually in Protege by copying an existing class URI into the "Create a new Named individual" form, with the "new entity options ..." set to expect a user supplied name.  This preserves the same identifier for both class and individual).
+Following this pattern, an instance of `handedness value specification` can have a **`specifies value of`** axiom pointing to a `handedness` class instance. This involves some extra setup because each `handedness` instance selection can't be referenced directly as a class - it needs to be "**punned**". In other words an individual needs to be created to mirror each categorical choice, so for example classes for left handedness, right handedness, ambidextrous handedness all need mirrored individuals - and in this case these are not native to the PATO ontology that the classes originate from. (Punning is accomplished manually in Protege by copying an existing class URI into the "Create a new Named individual" form, with the "new entity options ..." set to expect a user supplied name.  This preserves the same identifier for both class and individual). 
 
-[//]: # (Is punning somehow automated so that loading an ontology with [individual x] `specifies value of` [Class y] causes Class y to be punned automatically? )
+**As well Protege, when opening a file and encountering an object property with an instance reference at one end and a class reference at the other, will automatically create an instance for the class, and give it the same ontology URI identifier. This eliminates reasoning errors that would otherwise arise, but also means you may end up with namedIndividual instances you didn't manually create.**   A TRUE CHARACTERIZATION ???
 
-[//]: # (A simplified model could shift the burden of choice enumeration directly to value specification. )
-
-[//]: # (Note that as future versions of a standard occur, it may be feasible to attach individuals of past standards to them if no semantics have changed, thus simplifying data analysis.)
-
-*Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938){:target="_blank"} for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999){:target="_blank"} object property that linked to a set or class of permissible terms (as shown in OBI's existing `handedness value specification` example). This class and relation is being discouraged in favour of the categorical value specification approach.*
-
-## Unworkable , REVISE
-
-However, some complications arise which the following example will explore.  We could try to capture a [`handedness`](http://purl.obolibrary.org/obo/PATO_0002201){:target="_blank"} quality with:
-
-    Class: 'handedness value specification'
-        subClassOf 'categorical value specification'
-        subClassOf 'has specified value' only handedness 
-
-However, this is not permitted in OWL since **`has specified value`** data property can only have a literal on the right side. The target could be expressed simply as "`has specified value` only xsd:anyURI", thus allowing values like xsd:anyURI [right-handedness](http://purl.obolibrary.org/obo/PATO_0002203){:target="_blank"} but this then requires some validation mechanism external to an OWL reasoner for limiting categorical values. The Class doesn't indicate what the choices are.
-
+The target could be expressed simply as "`has specified value` only xsd:anyURI", thus allowing values like xsd:anyURI [right-handedness](http://purl.obolibrary.org/obo/PATO_0002203){:target="_blank"} but this then requires some validation mechanism external to an OWL reasoner for limiting categorical values.
 
 [//]: # (Slightly different from a boolean value specification below, a binary value specification is a categorical value specification with only two choices.)
 
@@ -62,6 +66,26 @@ This allows a reasoner to raise the unsatisfiable alarm when an instance of `E-c
 
 One can potentially leave the `has specified value` axiom out, in which case validation enforcement would need to occur outside the OWL reasoning context.
 
-## Ordinal
+Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938){:target="_blank"} for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999){:target="_blank"} object property that linked to a set or class of permissible terms (as shown in OBI's existing `handedness value specification` example). This class and relation is being discouraged in favour of the categorical value specification approach.
+
+### Ordinal Variables
 
 OBI does not currently have a recommendation about how to define an ordered categorical variable. A ranking data property for each choice could be used; or potentially previous/next relations could be established between choices.
+x
+## "Other" values
+
+???
+
+## Other approaches
+
+Other ontologies might promote the use of their own **object properties**, which we shy away from adopting for these [reasons](https://ddooley.github.io/docs/vs-vs-dp/).
+
+<img align="right" src="/assets/images/docs/data_john_sex_op.png">
+
+Here `has phenotypic sex` would be an object property - a subclass of `has quality` - existing between a BFO independent continuent entity (the bearer) and a specifically dependent continuent that is about an organism's sexuality. The quality is represented as a categorical value. The range of `has phenotypic sex` can be constrained to PATO `phenotypic sex`.
+
+Other ontologies may allow a string value (or number code) via a specially defined **data property**, a variant on `has specified value`. One could add a regular expression to validate a string to match possible values of a categorical variable as in above H antigen example.
+
+<img align="right" src="/assets/images/docs/data_john_sex_dp.png">
+
+Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For any kind of axioms to work reliably with these values, the literals must be normalized to categorical values of sexuality.
