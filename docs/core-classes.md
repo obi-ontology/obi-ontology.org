@@ -21,6 +21,6 @@ Any [`planned process`](http://purl.obolibrary.org/obo/OBI_0000011) can specify 
 
 We then use the `has specified input` and `has specified output` object properties to link these processes to either [`material entity`](http://purl.obolibrary.org/obo/BFO_0000040) or [`data item`](http://purl.obolibrary.org/obo/IAO_0000027) objects to describe a complete experimental scientific protocol. The actual values of data elements in OBI are mainly provided by instances of the [`value specification`](http://purl.obolibrary.org/obo/OBI_0001933) class. We may also specify the conclusions of a study through the [`drawing a conclusion based on data`](http://purl.obolibrary.org/obo/OBI_0000338) process which generates a [`conclusion based on data`](http://purl.obolibrary.org/obo/OBI_0001909). Additional semantics are invoked to instantiate these models for real data, but these core classes provide the basic structure for such descriptions. 
 
-<!-- An example of the use of this architecture to specify a protocol in the molecular biology space will be forthcoming below. -->
+<!-- An example of the use of this architecture to specify a protocol in the molecular biology space will be forthcoming below.  -->
 
    
