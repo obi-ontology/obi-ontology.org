@@ -12,7 +12,7 @@ sidebar:
 
 The inability of [`data properties`](/docs/data_properties/) to provide units, valid categorical choices or timestamped datums has led OBI to introduce a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, organized in OBI by their value datatypes:
 
-<img align="right" src="/assets/images/docs/data_value_specs.png">
+<img src="/assets/images/docs/data_value_specs.png">
 
 - A `string value specification` includes a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** as described in the `data properties` section.
 
