@@ -8,7 +8,7 @@ sidebar:
 
 The top-level organization of the main classes of the ontology conforms to the Basic Formal Ontology (BFO) upper ontology as shown in the following figure:
 
-![Basic Class Hierarchy](/assets/images/docs/journal.pone.0154556.g001.PNG)
+![Basic Class Hierarchy](/assets/images/docs/bfo_obi_scheme.png)
 
 This provides a basic model for how OBI structures a theoretical description of experimental methodology.  Although this view is quite complicated, much of the design of OBI revolves round four classes: (A) [`planned process`](http://purl.obolibrary.org/obo/OBI_0000011)
 (B) [`plan specification`](http://purl.obolibrary.org/obo/IAO_0000104), (C) [`material entity`](http://purl.obolibrary.org/obo/BFO_0000040), and (D) [`information content entity`](http://purl.obolibrary.org/obo/IAO_0000030). 
