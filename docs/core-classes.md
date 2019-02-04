@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Core Classes
 permalink: /docs/core-classes/
 sidebar:
