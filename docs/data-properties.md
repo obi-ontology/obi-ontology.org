@@ -10,25 +10,25 @@ sidebar:
 
 This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  
 
-*First, OBI makes the distinction between values that can be placed directly on a categorical or numeric scale, and those that require some further parsing to extract atomic elements from, e.g. the strings "20g" and "20grams" which are the same quantity, but which differ by string comparison.  For this "undigested data" OBI will provide a [`has representation`]() annotation. 
+FOR BJORN!: *First, OBI makes the distinction between values that can be placed directly on a categorical or numeric scale, and those that require some further parsing to extract atomic elements from, e.g. the strings "20g", "20 grams", and "0.02kg" which are the same quantity, but which differ by string comparison.  For this "undigested data" OBI provides a [`has representation`]() annotation that holds a string or a resource identifier which is not expected to play a direct role in OWL data-related axioms.*
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
-An ontology **`data property`** is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property used to express that Lee's age is 12, as shown to the right. OBI doesn't promote this approach, as explained below,  
+An ontology **`data property`** is a relation from an entity instance straight to some literal datatype value (an RDF number, string or date for example) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property used to express that Lee's age is 12, as shown to the right. OBI shies away from this approach, as explained below.  
 
 <br clear="both">
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_ages.png">
 
-The label of the data property tells humans in hopefully plain language what the value is about, but a computer will have a bad time guessing what the relation is equivalent to in other graphs that have differently named or identified relations that mean the same thing, which spells trouble for data sharing unless the roster of data properties is a common standard.  As shown, the problem is magnified if other age quantities are involved.
+The label of the data property tells humans in hopefully plain language what the value is about, but a reasoner will have a bad time guessing what the relation is equivalent to in other graphs that have differently named or identified relations that mean the same thing.  As shown, the problem is magnified if other age quantities are involved.
 
 <br clear="both">
 
 <img align="right" src="/assets/images/docs/data_age_measurement_datums.png">
 
-In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical and biological research realm; a number from OBI are listed here. We're either faced with creating a litany of data properties, or of trying another approach to supply measurements and their semantics. OBI has chosen a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. **This is not to say non-OBI `data properties` are forbidden in application ontologies - but having a conversion path that defines a custom data property in terms of a generic BFO set of terms is a good exercise that anticipates data conversion issues.**
+In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical and biological research realm; a number from OBI are listed here. Rather than creating a litany of data properties, OBI has chosen an alternative approach - a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. **This is not to say non-OBI `data properties` are forbidden in application ontologies - but going through the exercise of defining them in terms of a generic BFO set of terms is a good exercise that may anticipate data sharing issues.**
 
-Below is an example focusing on providing values for information content entities (typical personal information like email address, street address, and social security number) connected to a person instance.
+Below is an example focusing on providing values for information content entities typically connected to a person instance.
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
@@ -40,21 +40,23 @@ Data sources may mark missing values in a variety of ways - by an empty string, 
 
 - An entity's object property lacks a `has specified value` relation where one is expected.
 
-- For an entity that `has quality` some instance of a quality which is described by an instance of a `categorical value specification`, if the quality instance is the same as the CVS class `specifies value of` target, then no choice has been made, and no information is carried.
+- For a value being described by a `categorical value specification` (CVS) class, if that value matches the CVS class's expressed  `specifies value of` target, then no choice has been made, and no information is carried.
 
 Suitable object properties:
 
-- `inheres in` or `bearer of` object property if ...???
+It is straightforward to see an entity connected to a pertinent quality via `has quality`.  But what object properties should connect entities to ICES?
+
 - `denotes` if the ICE is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
 - 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
+- `inheres in` or `bearer of` object property if ...???
 
 One can also use cardinality to specify more than one data property is allowed or required. Note that some OWL reasoning profiles don't work with cardinality.
 
-Now, back to the age example, it looks like we could supply various age measurements like this:
+Now, back to the age example, it seems like we could supply various age measurements like this:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
-Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
+To summarize, rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 
