@@ -74,7 +74,7 @@ OBI does not currently have a recommendation about how to define an ordered cate
 
 ## "Other" values
 
-A qualitative survey question may canvass users for an open-ended response if the given selections are inadequate or should be elaborated on. OBI would require a separate string value specification to capture this input.
+A qualitative survey question may canvass users for an open-ended response if the given selections are inadequate or should be elaborated on. OBI would require a separate `has string representation` to capture this input, as it would need to be evaluated for its categorical or numeric potential.
 
 ## Other approaches
 
@@ -84,7 +84,7 @@ Other ontologies might use their own **object properties**, which OBI avoids (se
 
 Here `has phenotypic sex` would be an object property - a subclass of `has quality` - existing between a BFO independent continuent entity (the bearer) and a specifically dependent continuent that is about an organism's sexuality. The quality is represented as a categorical value. The range of `has phenotypic sex` can be constrained to PATO `phenotypic sex`.
 
-Other ontologies may allow a string value (or number code) via a  **data property**, as shown below. One could add a regular expression to validate a string to match possible values of a categorical variable as in above E-coli K antigen example.
+Other ontologies may allow a string value (or number code) via a **data property**, as shown below. One could add a regular expression to validate a string to match possible values of a categorical variable as in above E-coli K antigen example.
 
 <img align="right" src="/assets/images/docs/data_john_sex_dp.png">
 
