@@ -17,12 +17,10 @@ The Ontology for Biomedical Investigations (OBI) helps you communicate clearly a
 
 It's easy to use with many other
 [Open Biomedical Ontologies](http://obofoundry.org),
-including the
-[Gene Ontology](http://geneontology.org/),
+including the [Gene Ontology](http://geneontology.org/),
 [Protein Ontology](http://pir.georgetown.edu/pro/pro.shtml),
 [Plant Ontology](http://www.plantontology.org/),
-[ChEBI](http://www.ebi.ac.uk/chebi/),
-and [many more](http://obofoundry.org).
+[ChEBI](http://www.ebi.ac.uk/chebi/), and [many more](http://obofoundry.org).
 
 
 ## What is an Ontology?
@@ -34,12 +32,12 @@ By using OBI terms when you collect your data, you benefit from the careful defi
 
 ## Documentation
 
-The [OBI Wiki](https://github.com/obi-ontology/obi/wiki) includes documentation on the use and development of OBI. Like OBI, the wiki is under development and we encourage contributions.
+The [Documentation](/docs) section includes documentation on the use and development of OBI. Like OBI, the wiki is under development and we encourage contributions.
 
 
 ## Request a Term
 
-Please see our [term guidelines](/page/OBI_term_guidelines) for information on how to request a new term, or request changes to an existing term.
+Please see our [term guidelines](/term-guidelines) for information on how to request a new term, or request changes to an existing term.
 
 
 ## Report a Problem
@@ -49,7 +47,7 @@ Please use our GitHub issue tracker to report a problem with OBI: <https://githu
 
 ## Cite OBI
 
-Please cite [The Ontology for Biomedical Investigations](https://www.ncbi.nlm.nih.gov/pubmed/27128319), PLoS One. 2016 Apr 29;11(4):e0154556. doi: 10.1371/journal.pone.0154556. eCollection 2016.
+Please cite [The Ontology for Biomedical Investigations](https://www.ncbi.nlm.nih.gov/pubmed/27128319), PLoS One. 2016 Apr 29;11(4):e0154556. doi: 10.1371/journal.pone.0154556. eCollection 2016. A list of other [OBI papers](/media).
 
 
 ## Contact Us
