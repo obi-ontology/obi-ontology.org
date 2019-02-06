@@ -25,6 +25,16 @@ The next example shows a **[`mass measurement assay`](http://purl.obolibrary.org
 
 The Abox shows John as an input (standing on a scale, say), and documents that a `mass measurement datum` has been taken by the `mass measurement assay`. A process modeller can work at this more abstract level, avoiding references to specific protocols or instruments involving, say, units of measure. Alternately, by merging process modelling with specific value specifications (described below), we can describe particular equipment used in an experimental protocol or execution - say a brand and model of weight scale that is only capable of measuring in grams. (That level of detail promotes an ontology-driven plug-and-play future of equipment selection and protocol design.)
 
+## Marking process start, end and duration
+
+### ISSUES:
+- Do we allow 'has date representation' ???
+- Do we allow `is duration of` for start, end and duration? Do we make them qualities (e.g. birth date = (start date and quality of mammal ...) and then use `has quality` relation?
+
+<img src="/assets/images/docs/data_process_datetime.png">
+
+<img src="/assets/images/docs/data_process_datetime_context.png">
+
 ## Processes with inputs playing roles
 
 **Mark's doctor/patient interaction event example here....**

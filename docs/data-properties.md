@@ -73,8 +73,14 @@ Data sources may mark missing values in a variety of ways - by an empty string, 
 It is straightforward to see an entity connected to a pertinent quality via `has quality`.  But what object properties should connect entities to ICES?
 
 - `denotes` if the ICE is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
+
 - 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
+
 - `inheres in` or `bearer of` object property if ...???
+
+- [`is duration of`](http://purl.obolibrary.org/obo/IAO_0000413) if datum is a [`time measurement datum`](http://purl.obolibrary.org/obo/IAO_0000416) that is a duration of a process.  This also inludes links to the [`date process started`](http://purl.obolibrary.org/obo/OBI_0002471) or date process ended datetime of a process (in that case the duration about the process of (calendar) history itself to the given start or ending timepoint.)
+
+- `...` if datum is a , ending date or generalized event date of some process duration.
 
 One can also use cardinality to specify more than one data property is allowed or required. Note that some OWL reasoning profiles don't work with cardinality.
 
