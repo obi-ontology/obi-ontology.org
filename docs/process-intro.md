@@ -28,7 +28,7 @@ The Abox shows John as an input (standing on a scale, say), and documents that a
 ## Marking process start, end and duration
 
 ### ISSUES:
-- Do we allow 'has date representation' ???
+- Do we allow 'has date representation' data property with xsd:datetime ?
 - Do we allow `is duration of` for start, end and duration? Do we make them qualities (e.g. birth date = (start date and quality of mammal ...) and then use `has quality` relation?
 
 <img src="/assets/images/docs/data_process_datetime.png">

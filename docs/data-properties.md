@@ -66,7 +66,7 @@ Data sources may mark missing values in a variety of ways - by an empty string, 
 
 - An entity's object property lacks a `has specified value` relation where one is expected.
 
-- For a value being described by a `categorical value specification` (CVS) class, if that value matches the CVS class's expressed  `specifies value of` target, then no choice has been made, and no information is carried.
+- For an instance value being described by a `categorical value specification` (CVS) class, if that value matches the CVS class's expressed  `specifies value of` target, then no choice has been made, and no information is carried.
 
 ## Suitable object properties
 
