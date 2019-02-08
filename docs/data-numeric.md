@@ -22,7 +22,7 @@ OBI currently does not provide functionality for specifying numeric precision or
 [//]: # (        subClassOf 'decimal value specification')
 -->
 
-Here an example class you could compose (it isn't in OBI) for collecting a pH acidity measurement, using the Unit Ontology's  [`pH`](http://purl.obolibrary.org/obo/UO_0000196) unit, and GenEpiO's [`pH measurement`](http://purl.obolibrary.org/obo/GENEPIO_0001736). 
+Here an example class one could compose (it isn't in OBI) for collecting a pH acidity measurement, using the Unit Ontology's  [`pH`](http://purl.obolibrary.org/obo/UO_0000196) unit, and GenEpiO's [`pH measurement`](http://purl.obolibrary.org/obo/GENEPIO_0001736). 
 
     Class 'ph value specification'
         subClassOf 'scalar value specification'

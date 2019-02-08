@@ -15,7 +15,7 @@ Diagrammed on the left side are typical examples of field data related to a rese
 A given datum value from the left may match one of two scenarios:
 
 ### Value specification compatible
-A value that can be placed on a numeric or categorical scale. In this case a [`value specifications`](/docs/data-vs) instance can be set up for it. For example:
+A value that can be placed on a numeric or categorical scale. In this case a [`value specification`](/docs/data-vs) instance can be set up for it. For example:
 
 - The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into the atomic components found on the right - a decimal 20.0 and the unit "gram". 
 
