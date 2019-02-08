@@ -34,12 +34,12 @@ A datum value that has some (symbol) information in it that may or may not fit d
 
 OBI uses a data property **[`has representation`]()** to express triples in the form "[datum] `has representation` [value]"; Value representation semantics are further divided into:
 
-- `has alphanumeric representation` for a datum whose textual content represents alphanumeric text (not numeric). Usually stored as xsd:string
+- `has alphanumeric representation` for a datum whose textual content represents alphanumeric text (not numeric). Usually stored as xsd:string. Suitable for many kinds of identifier.
 - `has datetime representation` for a datum whose textual content represents a date or time. Usually stored as xsd:datetime.
 - `has boolean representation` for a datum which is represented as a yes/no or true/false value. Usually stored as xsd:boolean.
 - `has linguistic representation` for a datum whose textual content represents human linguistic content (words, phrases, sentences). Usually stored as xsd:string, with possible indication of language.
 - `has numeric representation` for a datum whose textual content represents a number. Usually xsd:decimal or xsd:integer (for counts).
-- `has URI resource representation` (OR `has_electronic_document_representation`) for a datum whose textual content represents a file or resource location ???. Usually xsd:string 
+- `has URI resource representation` (OR `has_electronic_document_representation`) for a datum whose textual content represents a file or resource location ???. Usually xsd:string or xsd:anyURI.
 
 ### Data Property Implementation Approaches
 
