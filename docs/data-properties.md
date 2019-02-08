@@ -14,25 +14,25 @@ Diagrammed on the left side are typical examples of field data related to a rese
 
 A given datum value from the left may match one of two scenarios:
 
-### Value specification compatible
+#### Value specification compatible
 A value that can be placed on a numeric or categorical scale. In this case a [`value specification`](/docs/data-vs) instance can be set up for it. For example:
 
-- The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into the atomic components found on the right - a decimal 20.0 and the unit "gram". 
+- The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into the atomic components found on the right - a decimal 20.0 and a "gram" mass unit . 
 
-- A categorical variable like color can match selections from standardized color wheels. (Synonyms can be handled under this category too, e.g. "sienna, sepia, umber, terra cotta" -> `brown`)
+- A categorical variable like color can match selections from a list or branch of ontology terms (e.g. terms from a standardized color wheel). (Synonyms can be handled under this category too, e.g. "sienna, sepia, umber, terra cotta" -> `brown`)
 
-### Value representation compatible 
+#### Value representation compatible 
 A datum value that has some (symbol) information in it that may or may not fit directly on a numeric or categorical scale; further parsing may yeild a data structure of more atomic components. It may be an identifier which can be compared with other values for a match. Use a `value representation` to hold "undigested" data (say, in preparation for parsing by SPARQL etc.; other directives may be provided to enable interpretation of the datum's value).  For example:
 
 - The address "16500 Mullholland Dr., Los Angeles, CA, USA" needs parsing to extract house/apartment number, street, city, country, etc.
 
 - **The fictitious Social Security Number "000-11-2222", an identifier which is not really on a scale or a categorical value. It is essentially atomic; it serves a data matchmaking role.**
 
-- An ICE '[`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification "https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"
+- An ICE '[`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
 
 - "20g" may be held as a value representation en route to becoming a value specification.
 
-OBI uses a data property `has representation` to express triples in the form "[datum] `has representation` [value]"; Value representation semantics are further divided into `has string representation`, `has numeric representation`, and `has URI resource representation` (OR `has_electronic_document_representation`). 
+OBI uses a data property **[`has representation`]()** to express triples in the form "[datum] `has representation` [value]"; Value representation semantics are further divided into `has string representation`, `has numeric representation`, and `has URI resource representation` (OR `has_electronic_document_representation`). 
 
 ### Data Property Implementation Approaches
 
@@ -58,7 +58,7 @@ Below is an example focusing on providing values for information content entitie
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
-OBI uses data properties in a limited way, via `has representation`, [`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135), and [`has specified numeric value`](http://purl.obolibrary.org/obo/OBI_0001937), and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
+OBI uses data properties in a limited way, via `has representation`, [`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135), and [`has specified numeric value`](http://purl.obolibrary.org/obo/OBI_0001937), and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this 'aboutness' information can guide the merging and federated querying of triple store graphs.
 
 ## Missing values
 
@@ -70,21 +70,19 @@ Data sources may mark missing values in a variety of ways - by an empty string, 
 
 ## Suitable object properties
 
-It is straightforward to see an entity connected to a pertinent quality via `has quality`.  But what object properties should connect entities to ICES?
+It is straightforward to see an entity connected to a pertinent quality via `has quality`.  But which object property should be used to connect an entity to other types of things?
 
-- `denotes` if the ICE is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
+- thing [`denotes`](http://purl.obolibrary.org/obo/IAO_0000219) entity if the thing is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
 
-- 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
+- thing [`location of`](http://purl.obolibrary.org/obo/RO_0001015) entity if thing is a geospatial reference.
 
-- `inheres in` or `bearer of` object property if ...???
+- thing [`inheres in`]() entity or [`bearer of`]() if ...???
 
-- [`is duration of`](http://purl.obolibrary.org/obo/IAO_0000413) if datum is a [`time measurement datum`](http://purl.obolibrary.org/obo/IAO_0000416) that is a duration of a process.  This also inludes links to the [`date process started`](http://purl.obolibrary.org/obo/OBI_0002471) or date process ended datetime of a process (in that case the duration about the process of (calendar) history itself to the given start or ending timepoint.)
-
-- `...` if datum is a , ending date or generalized event date of some process duration.
+- datum [`is duration of`](http://purl.obolibrary.org/obo/IAO_0000413) entity if datum is a [`time measurement datum`](http://purl.obolibrary.org/obo/IAO_0000416) that is a duration of a process.  This also inludes links to the [`date process started`](http://purl.obolibrary.org/obo/OBI_0002471) or `process end date` datetime of a process (in that case the duration about the reference calendar start to the given start or ending timepoint.)
 
 One can also use cardinality to specify more than one data property is allowed or required. Note that some OWL reasoning profiles don't work with cardinality.
 
-Now, back to the age example, it seems like we could supply various age measurements like this:
+Now, back to the age example, it seems like we could supply various age measurements like so:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
