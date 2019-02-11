@@ -9,6 +9,8 @@ sidebar:
 
 ## Marking process start, end and duration
 
+#### *Looks like this will be a topic discussed at upcomming US2TS meeting???*
+
 Process timing can be abstractly conveyed via the dependencies established between processes using `has specified input` and `has specified output`.  However, for experimental protocols, plans, or in observed results it may be necessary to indicate specific start and end times and process durations.
 
 ### ISSUES:
