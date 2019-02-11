@@ -32,7 +32,7 @@ A datum value that has some (symbol) information in it that may or may not fit d
 
 - "20g" may be held as a value representation en route to becoming a value specification.
 
-OBI uses a data property **[`has representation`]()** to express triples in the form "[datum] `has representation` [value]"; Value representation semantics are further divided into:
+OBI uses a data property **[`has literal representation`]()** *(Mark's proposed name)* to express triples in the form "[datum] `has literal representation` [value]"; Value representation semantics are further divided into:
 
 - `has alphanumeric representation` for a datum whose textual content represents alphanumeric text (not numeric). Usually stored as xsd:string. Suitable for many kinds of identifier.
 - `has datetime representation` for a datum whose textual content represents a date or time. Usually stored as xsd:datetime.
