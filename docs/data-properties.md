@@ -32,14 +32,20 @@ A datum value that has some (symbol) information in it that may or may not fit d
 
 - "20g" may be held as a value representation en route to becoming a value specification.
 
-OBI uses a data property **[`has literal representation`]()** *(Mark's proposed name)* to express triples in the form "[datum] `has literal representation` [value]"; Value representation semantics are further divided into:
+OBI can generally express rdf/xml data type values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]" or `has xsd:Literal representation` - the label is up for debate; Data property value semantics are further divided into:
 
-- `has alphanumeric representation` for a datum whose textual content represents alphanumeric text (not numeric). Usually stored as xsd:string. Suitable for many kinds of identifier.
-- `has datetime representation` for a datum whose textual content represents a date or time. Usually stored as xsd:datetime.
-- `has boolean representation` for a datum which is represented as a yes/no or true/false value. Usually stored as xsd:boolean.
-- `has linguistic representation` for a datum whose textual content represents human linguistic content (words, phrases, sentences). Usually stored as xsd:string, with possible indication of language.
-- `has numeric representation` for a datum whose textual content represents a number. Usually xsd:decimal or xsd:integer (for counts).
-- `has URI resource representation` (OR `has_electronic_document_representation`) for a datum whose textual content represents a file or resource location ???. Usually xsd:string or xsd:anyURI.
+- `has xsd:string representation` for textual content that can be parsed further, i.e. it is coded linguistically or computationally. Has xsd:string range. Suitable for identifiers, linguistic content (words, phrases, sentences with optional OWL language facet, and strings representing scalars like "20 g".
+
+- `has xsd:dateTime value` for a datum whose textual content represents a date or time. Has xsd:dateTime range.  Separate xsd:dateTimeStamp range ????.
+
+- `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value. Has xsd:boolean range.
+
+- `has owl:real value` for a datum whose textual content represents a number. Has owl:real range .
+   - `has xsd:decimal value` ...
+   - `has xsd:integer value` ... (for counts)
+
+UNRESOLVED:
+- `has xsd:anyURI value` (OR `has electronic document representation`) for a datum whose textual content represents a file or resource location ???. Usually xsd:string or xsd:anyURI.
 
 ### Data Property Implementation Approaches
 
