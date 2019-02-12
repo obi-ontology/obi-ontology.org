@@ -77,19 +77,17 @@ Data sources may mark missing values in a variety of ways - by an empty string, 
 
 ## Suitable object properties
 
-It is straightforward to see an entity connected to a pertinent quality via `has quality`.  But which object property should be used to connect an entity to other types of things?
+It is straightforward to see a material entity connected to a pertinent quality via `has quality`, but there are other object properties that connect a material entity to other types of things:
 
-- thing [`denotes`](http://purl.obolibrary.org/obo/IAO_0000219) entity if the thing is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
+- **More broadly, an information content entity (ICE) [`inheres in`](http://purl.obolibrary.org/obo/RO_0000052) material entity or material entity [`bearer of`](http://purl.obolibrary.org/obo/RO_0000053) ICE if the ICE is calculated from qualities of the material entity ????????**
 
-- thing [`location of`](http://purl.obolibrary.org/obo/RO_0001015) entity if thing is a geospatial reference.
+- Thing [`denotes`](http://purl.obolibrary.org/obo/IAO_0000219) material entity if the thing is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
 
-- thing [`inheres in`]() entity or [`bearer of`]() if ...???
+- Material entity [`located in`](http://purl.obolibrary.org/obo/RO_0001025) geospatial reference.  Note the editor's note: "Most location relations will only hold at certain times, but this is difficult to specify in OWL." 
 
-- datum [`is duration of`](http://purl.obolibrary.org/obo/IAO_0000413) entity if datum is a [`time measurement datum`](http://purl.obolibrary.org/obo/IAO_0000416) that is a duration of a process.  This also inludes links to the [`date process started`](http://purl.obolibrary.org/obo/OBI_0002471) or `process end date` datetime of a process (in that case the duration about the reference calendar start to the given start or ending timepoint.)
+One can also use cardinality to specify more than one data property is allowed or required. However, some OWL reasoning profiles don't work with cardinality.
 
-One can also use cardinality to specify more than one data property is allowed or required. Note that some OWL reasoning profiles don't work with cardinality.
-
-Now, back to the age example, it seems like we could supply various age measurements like so:
+Now, back to the age example, it seems we could supply various age measurements like so:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
@@ -99,7 +97,7 @@ However, there are some limitations of data properties that this diagram and the
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 
-- A data property can't include a unit directly, so a second data property is required to eliminate ambiguity.  Is Lee a 12 year old youth, or a 12 month old toddler?  We need the **unit of measure**, in minutes, days, months, or years.   In the example diagram of Lee's data properties to right, is the `has weight` decimal value given in kilos or grams? Is height in meters or centimetres? Without an explicit unit, assumptions are made about units associated with a data property.
+- A data property can't include a unit directly, so a second data property is needed for that.  Is Lee a 12 year old youth, or a 12 month old toddler?  We need the **unit of measure**, in minutes, days, months, or years.   In the example diagram of Lee's data properties to right, is the `has weight` decimal value given in kilos or grams? Is height in meters or centimetres? Without an explicit unit, assumptions are made about units associated with a data property.
 
 - A data property doesn't support a relevant time of measurement value.  For example, when was Lee's `has height` observed, and was it the same time as `has weight`, such that an accurate BMI can be calculated?  Admittedly, time differentiated data is rather complex to model in OWL. A pragmatic approach, if workable, is to only expose to an OWL reasoner data that doesn't need to be differentiated by time. In the BMI example, we could assume height and weight data properties are adequately close in time that derivative calculations are ok. OBI does offer annother approach detailed in the `Time-stamped data` section to describe n-dimensional points that include time.
 

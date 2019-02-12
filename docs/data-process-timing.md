@@ -17,6 +17,9 @@ Process timing can be abstractly conveyed via the dependencies established betwe
 - Do we allow 'has date representation' data property with xsd:datetime ?
 - Do we allow `is duration of` for start, end and duration? Do we make them qualities (e.g. birth date = (start date and quality of mammal ...) and then use `has quality` relation?
 
+Datum [`is duration of`](http://purl.obolibrary.org/obo/IAO_0000413) entity if datum is a [`time measurement datum`](http://purl.obolibrary.org/obo/IAO_0000416) that is a duration of a process.  This also inludes links to the [`date process started`](http://purl.obolibrary.org/obo/OBI_0002471) or `process end date` datetime value of a process (in that case the duration about the reference calendar start to the given start or ending timepoint.)
+
+
 <img src="/assets/images/docs/data_process_datetime.png">
 
 <img src="/assets/images/docs/data_process_datetime_context.png">
