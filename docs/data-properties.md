@@ -28,7 +28,7 @@ A datum value that has some (symbol) information in it that may or may not fit d
 
 - **The fictitious Social Security Number "000-11-2222", an identifier which is not really on a scale or a categorical value. It is essentially atomic; it serves a data matchmaking role.**
 
-- An ICE '[`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
+- An ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
 
 - "20g" may be held as a value representation en route to becoming a value specification.
 
