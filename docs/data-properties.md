@@ -32,9 +32,9 @@ A datum value that has some (symbol) information in it that may or may not fit d
 
 - "20g" may be held as a value representation en route to becoming a value specification.
 
-OBI can generally express rdf/xml data type values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]" or `has xsd:Literal representation` - the label is up for debate; Data property value semantics are further divided into:
+OBI can generally express rdf/xml data type values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]" or "[ICE] `has xsd:Literal representation` [value]" - the label is up for debate; Data property value semantics are further divided into:
 
-- `has xsd:string representation` for textual content that can be parsed further, i.e. it is coded linguistically or computationally. Has xsd:string range. Suitable for identifiers, linguistic content (words, phrases, sentences with optional OWL language facet, and strings representing scalars like "20 g".
+- `has xsd:string representation` for textual content that may or may not be parsed further, i.e. it is coded linguistically or computationally. Has xsd:string range. Suitable for identifiers, linguistic content (words, phrases, sentences with optional OWL language facet, and strings representing scalars like "20 g".
 
 - `has xsd:dateTime value` for a datum whose textual content represents a date or time. Has xsd:dateTime range.  Separate xsd:dateTimeStamp range ????.
 
