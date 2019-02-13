@@ -12,7 +12,7 @@ Diagrammed on the left side are typical examples of field data related to a rese
 
 <img align="right" src="/assets/images/docs/data_raw.png">
 
-A given datum value from the left may match one of four scenarios, the first two involving a single data property, and the latter two involving a multi-component representation:
+A given datum value from the left may match one of four scenarios, the first two involving a single data property, and the latter two involving a multi-component "value specification" representation:
 
 #### OWL RDF/XML datatype compatible
 
@@ -21,6 +21,7 @@ OBI can generally express rdf/xml data type values associated with ICE enties us
 - `has owl:real value` for a datum whose textual content represents a number that is unit-less.  Has owl:real range.
    - `has xsd:decimal value` subclass for unitless decimal values.
    - `has xsd:integer value` subclass for counts and other unitless integers.
+
 
 - `has xsd:anyURI value` for a datum which contains a URI pointing to a document or other type of resource file.  Has xsd:anyURI range.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
 
