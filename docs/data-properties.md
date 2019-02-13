@@ -12,17 +12,35 @@ Diagrammed on the left side are typical examples of field data related to a rese
 
 <img align="right" src="/assets/images/docs/data_raw.png">
 
-A given datum value from the left may match one of two scenarios:
+A given datum value from the left may match one of three scenarios:
+
+#### OWL RDF/XML datatype compatible
+
+OBI can generally express rdf/xml data type values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]".  This covers common OWL-compatible [XML datatype schema](https://www.w3.org/TR/xmlschema-2/#built-in-datatypes) options, which can be further divided into:
+
+- `has owl:real value` for a datum whose textual content represents a number that is unit-less.  Has owl:real range.
+   - `has xsd:decimal value` subclass for unitless decimal values.
+   - `has xsd:integer value` subclass for counts and other unitless integers.
+
+- `has xsd:anyURI value` for a datum which contains a URI pointing to a document or other type of resource file.  Has xsd:anyURI range.
+
+- `has xsd:dateTime value` for a datum containing a xsd:dateTime formatted date or time. Has xsd:dateTime range.
+- Similarly, a `has xsd:dateTimeStamp value` for a date or time that includes a time zone.
+
+- `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value. Has xsd:boolean range.
 
 #### Value specification compatible
+
 A value that can be placed on a numeric or categorical scale. In this case a [`value specification`](/docs/data-vs) instance can be set up for it. For example:
+
+- A duration of 20 days.
 
 - The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into the atomic components found on the right - a decimal 20.0 and a "gram" mass unit . 
 
 - A categorical variable like color can match selections from a list or branch of ontology terms (e.g. terms from a standardized color wheel). (Synonyms can be handled under this category too, e.g. "sienna, sepia, umber, terra cotta" -> `brown`)
 
-#### Value representation compatible 
-A datum value that has some (symbol) information in it that may or may not fit directly on a numeric or categorical scale; further parsing may yeild a data structure of more atomic components. It may be an identifier which can be compared with other values for a match. Use a `value representation` to hold "undigested" data (say, in preparation for parsing by SPARQL etc.; other directives may be provided to enable interpretation of the datum's value).  For example:
+#### String representation compatible 
+A datum value that has some (symbol) information in it that may or may not fit directly on a numeric or categorical scale; further parsing may yeild a data structure of more atomic components. It may be an identifier which can be compared with other values for a match. Use a `string representation` to hold "undigested" data (say, in preparation for parsing by SPARQL etc.; other directives may be provided to enable interpretation of the datum's value).  For example:
 
 - The address "16500 Mullholland Dr., Los Angeles, CA, USA" needs parsing to extract house/apartment number, street, city, country, etc.
 
@@ -32,24 +50,11 @@ A datum value that has some (symbol) information in it that may or may not fit d
 
 - "20g" may be held as a value representation en route to becoming a value specification.
 
-OBI can generally express rdf/xml data type values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]" or "[ICE] `has xsd:Literal representation` [value]" - the label is currently up for debate.  Data property value semantics are further divided into (also labels are being debated):
-
-- `has xsd:string representation` for textual content that may or may not be parsed further, i.e. it may be coded linguistically or computationally. Has xsd:string range. Suitable for identifiers, linguistic content (words, phrases, sentences with optional OWL language facet, and strings representing scalars like "20 g".
-
-- `has xsd:dateTime value` for a datum whose textual content represents a date or time. Has xsd:dateTime range.  Separate xsd:dateTimeStamp range ????.
-
-- `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value. Has xsd:boolean range.
-
-- `has owl:real value` for a datum whose textual content represents a number. Has owl:real range .
-   - `has xsd:decimal value` ...
-   - `has xsd:integer value` ... (for counts)
-
-UNRESOLVED:
-- `has xsd:anyURI value` (OR `has electronic document representation`) for a datum whose textual content represents a file or resource location ???. Usually xsd:string or xsd:anyURI.
+OBI uses `has xsd:string representation` for textual content that may or may not be parsed further, i.e. it may be coded linguistically or computationally. Has xsd:string range. Suitable for identifiers, linguistic content (words, phrases, sentences with optional OWL language facet, and strings representing scalars like "20 g".
 
 ### Data Property Implementation Approaches
 
-Before we detail the use of `has representation` and `has specified value` data properties, we will discuss OBI's philosophy about data properties in general. 
+Before we detail the use of `has rdfs:Literal value` etc. and `has specified value` data properties, we will discuss OBI's philosophy about data properties in general. 
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
@@ -71,7 +76,7 @@ Below is an example focusing on providing values for information content entitie
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
-OBI uses data properties in a limited way, via `has representation`, [`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135), and [`has specified numeric value`](http://purl.obolibrary.org/obo/OBI_0001937), and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this 'aboutness' information can guide the merging and federated querying of triple store graphs.
+OBI uses data properties in a limited way, via `has [xml/rdf/owl datatype] value`, [`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135), and [`has specified numeric value`](http://purl.obolibrary.org/obo/OBI_0001937), and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this 'aboutness' information can guide the merging and federated querying of triple store graphs.
 
 ## Missing values
 
