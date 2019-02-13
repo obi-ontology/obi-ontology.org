@@ -12,7 +12,7 @@ Diagrammed on the left side are typical examples of field data related to a rese
 
 <img align="right" src="/assets/images/docs/data_raw.png">
 
-A given datum value from the left may match one of three scenarios:
+A given datum value from the left may match one of four scenarios, the first two involving a single data property, and the latter two involving a multi-component representation:
 
 #### OWL RDF/XML datatype compatible
 
@@ -29,17 +29,6 @@ OBI can generally express rdf/xml data type values associated with ICE enties us
 
 - `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value. Has xsd:boolean range.
 
-#### Scalar Value specification compatible
-
-A value that can be placed on a numeric scale which includes a unit. In this case a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) instance can be set up for it (see [docs/data-vs](docs/data-vs)). For example:
-
-- The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into the atomic components found on the right - a decimal 20.0 and a "gram" mass unit . 
-
-- A duration of 20 days.
-
-#### Categorical value specification compatible
-
-A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms, or from a branch of ontology terms (e.g. terms from a standardized color wheel). (Inputted synonyms can be handled too, e.g. "sienna, sepia, umber, terra cotta" -> "brown")
 
 #### String representation compatible 
 
@@ -53,7 +42,19 @@ A datum value that has some (symbol) information in it that may or may not fit d
 
 OBI uses `has xsd:string representation` for textual content that may or may not be parsed further, i.e. it may be coded linguistically or computationally. Has xsd:string range. Suitable for identifiers, linguistic content (words, phrases, sentences with optional OWL language facet, and strings representing scalars like "20 g".
 
-### Data Property Implementation Approaches
+#### Scalar Value specification compatible
+
+A value that can be placed on a numeric scale which includes a unit. In this case a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) instance can be set up for it (see [docs/data-vs](docs/data-vs)). For example:
+
+- The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into the atomic components found on the right - a decimal 20.0 and a "gram" mass unit . 
+
+- A duration of 20 days.
+
+#### Categorical value specification compatible
+
+A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms, or from a branch of ontology terms (e.g. terms from a standardized color wheel). (Inputted synonyms can be handled too, e.g. "sienna, sepia, umber, terra cotta" -> "brown")
+
+## Data Property Implementation Approaches
 
 Before we detail the use of `has rdfs:Literal value` etc. and `has specified value` data properties, we will discuss OBI's philosophy about data properties in general. 
 
