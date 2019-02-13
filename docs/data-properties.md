@@ -16,37 +16,38 @@ A given datum value from the left may match one of three scenarios:
 
 #### OWL RDF/XML datatype compatible
 
-OBI can generally express rdf/xml data type values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]".  This covers common OWL-compatible [XML datatype schema](https://www.w3.org/TR/xmlschema-2/#built-in-datatypes) options, which can be further divided into:
+OBI can generally express rdf/xml data type values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]".  This is suited to unit-less quantities, and covers common OWL-compatible [XML datatype schema](https://www.w3.org/TR/xmlschema-2/#built-in-datatypes) options, which can be further divided into:
 
 - `has owl:real value` for a datum whose textual content represents a number that is unit-less.  Has owl:real range.
    - `has xsd:decimal value` subclass for unitless decimal values.
    - `has xsd:integer value` subclass for counts and other unitless integers.
 
-- `has xsd:anyURI value` for a datum which contains a URI pointing to a document or other type of resource file.  Has xsd:anyURI range.
+- `has xsd:anyURI value` for a datum which contains a URI pointing to a document or other type of resource file.  Has xsd:anyURI range.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
 
 - `has xsd:dateTime value` for a datum containing a xsd:dateTime formatted date or time. Has xsd:dateTime range.
 - Similarly, a `has xsd:dateTimeStamp value` for a date or time that includes a time zone.
 
 - `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value. Has xsd:boolean range.
 
-#### Value specification compatible
+#### Scalar Value specification compatible
 
-A value that can be placed on a numeric or categorical scale. In this case a [`value specification`](/docs/data-vs) instance can be set up for it. For example:
-
-- A duration of 20 days.
+A value that can be placed on a numeric scale which includes a unit. In this case a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) instance can be set up for it (see [docs/data-vs](docs/data-vs)). For example:
 
 - The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into the atomic components found on the right - a decimal 20.0 and a "gram" mass unit . 
 
-- A categorical variable like color can match selections from a list or branch of ontology terms (e.g. terms from a standardized color wheel). (Synonyms can be handled under this category too, e.g. "sienna, sepia, umber, terra cotta" -> `brown`)
+- A duration of 20 days.
+
+#### Categorical value specification compatible
+
+A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms, or from a branch of ontology terms (e.g. terms from a standardized color wheel). (Inputted synonyms can be handled too, e.g. "sienna, sepia, umber, terra cotta" -> "brown")
 
 #### String representation compatible 
-A datum value that has some (symbol) information in it that may or may not fit directly on a numeric or categorical scale; further parsing may yeild a data structure of more atomic components. It may be an identifier which can be compared with other values for a match. Use a `string representation` to hold "undigested" data (say, in preparation for parsing by SPARQL etc.; other directives may be provided to enable interpretation of the datum's value).  For example:
+
+A datum value that has some (symbol) information in it that may or may not fit directly on a numeric or categorical scale; further parsing may yeild a data structure of more atomic components. It may be an identifier which can be compared with other values for a match. Use `has xsd:string representation` to hold "undigested" data (say, in preparation for parsing by SPARQL etc.; other directives may be provided to enable interpretation of the datum's value).  For example:
 
 - The address "16500 Mullholland Dr., Los Angeles, CA, USA" needs parsing to extract house/apartment number, street, city, country, etc.
 
 - The fictitious Social Security Number "000-11-2222", an identifier which is not really on a scale or a categorical value. It is essentially atomic; it serves a data matchmaking role.
-
-- An ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
 
 - "20g" may be held as a value representation en route to becoming a value specification.
 
