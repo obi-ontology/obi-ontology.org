@@ -16,7 +16,7 @@ A given datum value from the left may match one of four scenarios, the first two
 
 #### OWL RDF/XML datatype compatible
 
-OBI can generally express rdf/xml data type values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]".  This is suited to unit-less quantities, and covers common OWL-compatible [XML datatype schema](https://www.w3.org/TR/xmlschema-2/#built-in-datatypes) options, which can be further divided into:
+OBI can generally express rdf/xml datatype values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]".  This is suited to unit-less quantities, and covers common OWL-compatible [XML datatype schema](https://www.w3.org/TR/xmlschema-2/#built-in-datatypes) options, which can be further divided into:
 
 - `has owl:real value` for a datum whose textual content represents a number that is unit-less.  Has owl:real range.
    - `has xsd:decimal value` subclass for unit-less decimal values.
@@ -40,7 +40,7 @@ A datum value that has linguistically or computationally coded textual content c
 
 - "20g" may be held as a string representation en route to becoming a value specification.
 
-Such data could technically be stored as annotations but the potential for referencing it in reasoning is then lost.
+Such data could technically be stored as annotations but the potential for referencing it as input our output of process axioms is then lost.
 
 #### Scalar Value specification compatible
 

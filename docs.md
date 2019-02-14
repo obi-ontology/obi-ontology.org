@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Documentation
+title: DRAFT Documentation
 permalink: /docs/
 sidebar:
   nav: "docs"
 ---
 
 [//]: # (Please put comments like this one into the text to communicate with other OBI-ers)
+**This documentation is under active development in advance of official release.**
 
 This user manual is designed to explain the core functionality of OBI for newcomers, and to serve as a canonical reference for OBI developers. This is a work in progress, but here we detail and provide a roadmap for OBI building blocks.  In addition to reasoning prowess, using OBI and other OWL ontologies to detail types of assay data - parameters, measurables, independent and dependent variables - will encourage standardization of their usage, enable experimental reproducibility, and facilitate data exchange and conversion.
 
