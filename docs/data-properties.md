@@ -118,4 +118,8 @@ However, there are some limitations of data properties that this diagram and the
 
 - There is no direct way to indicate that an instance of paricular data property has a missing value since its object must have some value.  The data property as a whole could be omitted, and this may be sufficient for querying purposes.
 
-To answer the above needs, OBI introduced an additional `value specification` entity, as detailed in the next section.
+For a numeric one dimensional datum with a unit, that is, a datum that records a single value on a scale, it is possible to represent it directly using object and data properties.  Here an age datum has unit and value directly by way of `has measurement unit label` and `has xsd:decimal value`:
+
+<img align="right" src="/assets/images/docs/data_lee_object_property_age_unit.png">
+
+This doesn't provide the necessary structure for describing categorical and mulit-dimensional datums - time-stamped observations, or geographic lat/long location for example. To meet these needs, OBI has an additional `value specification` entity, as detailed in the next section.

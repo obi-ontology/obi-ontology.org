@@ -25,7 +25,9 @@ One can detail which assay was used to make this assessment:
 
 <img align="right" src="/assets/images/docs/data_john_sex_vs.png">
 
-A categorical value specification can point to the possible choices (which will vary depending on experimental protocol):
+A categorical value specification can point to the possible choices (which will vary depending on experimental protocol).  
+
+This provides a way of further constraining any kind of class-level 'has quality' constraint established at a more abstract level.
 
 <br clear="right">
 
@@ -78,7 +80,7 @@ A qualitative survey question may canvass users for an open-ended response if th
 
 ## Other approaches
 
-Other ontologies might use their own **object properties**, which OBI avoids (see [reasons](https://ddooley.github.io/docs/data-properties/)).
+Other ontologies might use their own **object properties**, which OBI avoids (see [reasons](https://ddooley.github.io/docs/data-properties/#data-property-implementation-approaches)).
 
 <img align="right" src="/assets/images/docs/data_john_sex_op.png">
 

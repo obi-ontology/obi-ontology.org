@@ -24,4 +24,36 @@ In summary, n-dimensional datums are achieved by the additive or conjunctive nat
 
 <img src="/assets/images/docs/data_timestamp_datum_conjunction.png">
 
-In OBI a [`time stamped measurement datum`](http://purl.obolibrary.org/obo/IAO_0000582) exists to associate time directly with a datum; however this older term is complex (it offers a datum within a datum) and may be retired.
+## ISSUE: What about using datum parthood instead? 
+
+Alan Ruttenberg created this structure which looks too complicated when used with value specification - but looks simple enough if connecting data properties directly which is probably what was intended. It uses `part of` subproperties to disambiguate the time dimension from the other (one or more) measurement datum components.
+
+Using:
+
+- [`time stamped measurement datum`](http://purl.obolibrary.org/obo/IAO_0000582)
+  - [`has time stamp`](http://purl.obolibrary.org/obo/IAO_0000416)
+    - [`time measurement datum`](http://purl.obolibrary.org/obo/IAO_0000416) that has only [`measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039) some [`time unit`]()
+  - [`has measurement datum`](http://purl.obolibrary.org/obo/IAO_0000583) 
+    - [`measurement datum`](http://purl.obolibrary.org/obo/IAO_0000109) 
+
+
+<img src="/assets/images/docs/data_timestamp_structure.png">
+
+Instance
+
+<img src="/assets/images/docs/data_timestamp_length.png">
+
+An application 
+
+    `time stamped measurement datum`:
+    - `has time stamp` exactly 1 `time measurement datum` // subproperty of 'has part'
+    - `has measurement datum` exactly 1 `measurement datum`
+
+    `geolocation coordinate datum`:
+    - `has part` exactly 1 `latitude datum` 
+    - `has part` exactly 1 `longitude datum`
+
+    `time stamped geolocation coordinate datum`:
+    - `has part` exactly 1 `timestamped datum` 
+    - `has part` exactly 1 `geolocation coordinate datum`
+
