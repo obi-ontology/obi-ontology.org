@@ -21,16 +21,14 @@ This user manual is designed to explain the core functionality of OBI for newcom
 
 * **[Robot Driven Templates](/docs/robot-intro)**: Chunks of OBI are composed using ROBOT by reading spreadsheets of term definitions.
 
-<!-- 
-* **Extended Class Definitions** (working models for specific subdomains and specializations of OBI beyond the core classes) 
-* **Example Use Cases** (how we describe specific use cases with OBI) 
-* **Implementation and Development Notes** (how we develop, extend and implement the ontology)
-* **Community** (Description of the OBI development community. Who were are and what our goals are for this work)
--->
+[//]: # (* **Extended Class Definitions** (working models for specific subdomains and specializations of OBI beyond the core classes) 
+[//]: # (* **Example Use Cases** (how we describe specific use cases with OBI) 
+[//]: # (* **Implementation and Development Notes** (how we develop, extend and implement the ontology)
+[//]: # (* **Community** (Description of the OBI development community. Who were are and what our goals are for this work)
 
 More background and detail on OBI vocabulary and functionality is available in papers listed on the [Media](/media/) page.
 
-Most documentation diagrams are contained in a [/assets/files/data_obi3_draw.io.xml](/assets/files/data_obi3_draw.io.xml){:target="_blank"} file, in [draw.io](http://draw.io){:target="_blank"} diagram format for reuse in ontology design work.  The diagrams usually skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples. 
+Most documentation diagrams are contained in a [/assets/files/data_obi3_draw.io.xml](/assets/files/data_obi3_draw.io.xml){:target="_blank"} file, in [draw.io](http://draw.io){:target="_blank"} diagram format for reuse in ontology design work.  A few visual design principles are at work: The diagrams usually skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.  Process inputs and outputs generally flow left to right; superclass/subclass is-a relations are vertical, and upper-level categories of entity are color-coded.
 
 Instance data for a number of the examples is provided in a [/assets/files/obi-examples.owl](/assets/files/obi-examples.owl){:target="_blank"} which can be viewed on its own in Protege, or by including it as an ontology import in OBI (or visa versa).
 

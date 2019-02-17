@@ -9,6 +9,11 @@ sidebar:
 
 # Value Specifications
 
+## Question: a `has xsd:Literal value` or `has measurement value` data property can be attached directly to an instance of a quality in the case of numeric measurements, and those qualities inherently come with `has measurement unit label` abstractly set to the base SI unit of quality dimension in question, so its easy to express "length of 2m", "weight of 50kg" that way.  What motivates us to use a value spec in this case?  The theoretical distinction exists between a datum as a process input/output that should only describe its aboutness; and a value specification that specifies the measurement value's form, seems to be blown with respect to qualities about SI dimensions. Allowing datums to be associated with units would need to be dropped to enforce the distinction.**
+
+## Another way to put it: M object relations and N data properties are available to describe both aboutness and content of a datum.  One choice is to move the content related ones out to a value specification.  But the semantics of these relations are distinct even if used together on a datum, so informatically this is the simplest way.  Subclasses of datum can constrain both aboutness and content form.**
+
+<hr>
 
 The inability of [`data properties`](/docs/data_properties/) to provide units, valid categorical choices or timestamped datums has led OBI to introduce a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, organized in OBI by their value datatypes:
 
@@ -52,6 +57,6 @@ Below, value specifications are used to supply catagorical values, units are pro
 
 ## Other metadata
 
-Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf){:target="_blank"}). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
+Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf)). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
 
-*In the future numeric value specifications may also include precision and error attributes.*
+*In the future numeric value specifications will likely include precision and error attributes.*
