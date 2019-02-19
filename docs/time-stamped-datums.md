@@ -10,7 +10,7 @@ Process models and data items can be enhanced with time information in a few way
 
 - Assays and other processes can be marked with start and/or stop times, and therefore any specified output could have those time points to mark its relevance. 
 
-## ISSUE: Can we use the existing datum parthood, and not use the VS approach? 
+## OBI allows time-stamped datums via both datum parthood, and via the VS approach!
 
 ## Time stamped data via datum parthood
 
@@ -25,25 +25,21 @@ Using:
     - [`measurement datum`](http://purl.obolibrary.org/obo/IAO_0000109) 
 
  
-<img src="/assets/images/docs/data_timestamp_structure.png">
-
-Instance
-
 <img src="/assets/images/docs/data_timestamp_length.png">
 
-An application 
+An example, using `has content datum` rather than `has measurement datum` when object isn't necessarily a measurement datum. `has time stamp` is a subproperty of `has part`
 
     `time stamped measurement datum`:
-    - `has time stamp` exactly 1 `time measurement datum` // subproperty of 'has part'
-    - `has measurement datum` exactly 1 `measurement datum`
+    - `has time stamp` exactly 1 `time measurement datum` 
+    - `has measurement datum` some `measurement datum`
 
     `geolocation coordinate datum`:
-    - `has part` exactly 1 `latitude datum` 
-    - `has part` exactly 1 `longitude datum`
+    - `has content datum` exactly 1 `latitude datum` 
+    - `has content datum` exactly 1 `longitude datum`
 
     `time stamped geolocation coordinate datum`:
-    - `has part` exactly 1 `time stamped measurement datum` 
-    - `has part` exactly 1 `geolocation coordinate datum`
+    - `has time stamp` exactly 1 `time measurement datum` 
+    - `has content datum` exactly 1 `geolocation coordinate datum`
 
 
 ## Time stamped data via value specifications
@@ -58,7 +54,7 @@ More specifically, here's a `time stamped geolocation datum` about a latitude an
 
 <img src="/assets/images/docs/data_timestamped_geolocation_3.png">
 
-In summary, n-dimensional datums are achieved by the additive or conjunctive nature of value specifications:
+In summary, n-dimensional datums are achieved by either:
 
 <img src="/assets/images/docs/data_timestamp_datum_conjunction.png">
 

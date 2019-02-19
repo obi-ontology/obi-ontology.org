@@ -196,6 +196,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-15T06:10:19Z</dc:date>
+        <rdfs:label xml:lang="en">pH measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
@@ -329,8 +340,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001169">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-11T08:44:41Z</dc:date>
         <rdfs:label xml:lang="en">age since birth measurement datum</rdfs:label>
     </owl:Class>
     
@@ -373,8 +382,6 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000003">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-13T23:21:47Z</dc:date>
         <rdfs:label xml:lang="en">John</rdfs:label>
     </owl:NamedIndividual>
     
