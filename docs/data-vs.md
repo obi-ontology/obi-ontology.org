@@ -7,7 +7,7 @@ sidebar:
    nav: "docs"
 ---
 
-The inability of [`data properties`](/docs/data_properties/) to provide units, valid categorical choices or timestamped datums has led OBI to introduce a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, organized in OBI by their value datatypes:
+OBI has introduced a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  A value specification can be separated from a ICE by way of a "[ICE] `has value specification` [value specification]" object property.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, which echo the combinations possible from direct connection of a datum to data properties:
 
 <img src="/assets/images/docs/data_value_specs.png">
 
