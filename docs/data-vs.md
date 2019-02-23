@@ -39,6 +39,10 @@ This is our first example of measuring a quality of a part of something. An inst
 
 "Homo sapiens has part some eye" is a parthood simplification for what some might need to model in a more complicated way.  For example, ophthalmologists need to distinguish left and right eyes, and allow each to have different iris colors (it happens!), and to describe the color of sclera or conjunctiva (e.g. for red eye or pink eye).  Uberon supports this with `left eye` and `right eye` terms as subclasses of `eye`, and says "`eye` `part of` some `visual system`" but it stops short of establishing a parthood chain between `eye` and `mammalia`.  In the future such standardizing axioms may be introduced which client ontologies and triple store databases can employ to ensure data structure compatibility.  Regardless, it is usually ok to use a simple `part of` relation to abbreviate a more intricate parthood chain if it fits your needed granularity of description.
 
+In this example, instance data shows `age measurement datum`  `is about` Lee. Currently value specifications can't be attached directly to the entities they are about, so reference to an intermediate datum or quality is required.
+
+<img src="/assets/images/docs/data_lee_age_value_specification.png">
+
 Note that different assays may output the same measurement datum and value specification combination.  For example an [`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156) and integer year value specification could be output from assays that calculate or estimate by input tree ring count, carbon 14 analysis, planting date, height of species etc.  It is up to an ontology implementer to define a more specific process as a sub-class of an existing general process if needed; if it falls within the scope of OBI, it may be a candidate for inclusion.
 
 Below, value specifications are used to supply catagorical values, units are provided, and qualities of parts of organisms are unambiguously described.
