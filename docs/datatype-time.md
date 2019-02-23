@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Date, Time, and Duration
-permalink: /docs/data-time/
+title: Date, Time, and Duration Datums
+permalink: /docs/datatype-time/
 toc: true
 sidebar:
   nav: "docs"
@@ -9,7 +9,7 @@ sidebar:
 
 ## Datetime
 
-Of XML's native date/time datatypes, OWL has currently adopted <!--  [`xsd:date`](http://www.datypic.com/sc/xsd11/t-xsd_date.html){:target="_blank"}, --> [`xsd:datetime`](http://www.datypic.com/sc/xsd11/t-xsd_dateTime.html){:target="_blank"} (format [-]CCYY-MM-DDThh:mm:ss.sss[Z\|(+\|\|-)hh:mm] according to the ISO 8601 standard) and [`xsd:dateTimeStamp`](http://www.datypic.com/sc/xsd11/t-xsd_dateTimeStamp.html){:target="_blank"} (format CCYY-MM-DDThh:mm:ss.sss(Z\|\|(+\|\|-)hh:mm), i.e. time zone required) into its reasoning specification.  A Gregorian calendar 24 hour clock instant of time is used, and will be compared down to the second and timezone offset for xsd:dateTime/Stamp formats.
+Of XML's native date/time datatypes, OWL has currently adopted [xsd:datetime](http://www.datypic.com/sc/xsd11/t-xsd_dateTime.html) (format [-]CCYY-MM-DDThh:mm:ss.sss[Z\|(+\|\|-)hh:mm] according to the ISO 8601 standard) and [xsd:dateTimeStamp](http://www.datypic.com/sc/xsd11/t-xsd_dateTimeStamp.html) (format CCYY-MM-DDThh:mm:ss.sss(Z\|\|(+\|\|-)hh:mm), i.e. time zone required) into its reasoning specification.  A Gregorian calendar 24 hour clock instant of time is used, and will be compared down to the second and timezone offset for xsd:dateTime/Stamp formats.
 
 <!--
 [//]: # (    Class: 'date value specification'
@@ -29,7 +29,7 @@ Often a need for date obfuscation arises when dealing with confidential data poi
 If a more complex model of date/time is required, the "Time Ontology in OWL" ([here](https://www.w3.org/2001/sw/BestPractices/OEP/Time-Ontology){:target="_blank"} and [here](https://www.w3.org/TR/owl-time/){:target="_blank"}) may suffice. 
 
 ## Duration
-,
+
 A duration is a difference in time calculated from an interval of two time points. (Semantically the interval is about those points and the events they mark). Value specifications for date and time durations or intervals are generally handled by decimal value specifications with one or more time units attached to them. This allows for decimal fraction amounts, e.g. 2.5 days. An 'age since birth' value specification could be as follows (including controlled selection of units):
 
 <!--

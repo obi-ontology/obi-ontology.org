@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Numeric Datums
-permalink: /docs/data-numeric/
+permalink: /docs/datatype-numeric/
 toc: true
 sidebar:
   nav: "docs"
@@ -90,5 +90,5 @@ A value specification can select at a general level all the permissible units wh
 
 Units extend to countable things like nucleotide 'basepairs' and potentially even 'oranges' or 'fruit' etc. In this respect they indicate the aboutness of the value specification.
 
-A particular datum may be allowed a choice of unit, for example age may be measured in years, months, days, or hours.  Value specifications can support a choice of units (as can be seen in the [`duration`](/docs/data-time/#duration) example, but OWL does not have a unit-quantity conversion mechanism - that normalization must be done directly on a triple store or at point of data entry.
+A particular datum may be allowed a choice of unit, for example age may be measured in years, months, days, or hours.  Value specifications can support a choice of units (as can be seen in the [`duration`](/docs/datatype-time/#duration) example, but OWL does not have a unit-quantity conversion mechanism - that normalization must be done directly on a triple store or at point of data entry.
 

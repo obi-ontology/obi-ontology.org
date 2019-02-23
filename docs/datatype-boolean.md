@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Boolean Datum
-permalink: /docs/data-boolean/
+permalink: /docs/datatype-boolean/
 toc: true
 sidebar:
   nav: "docs"
