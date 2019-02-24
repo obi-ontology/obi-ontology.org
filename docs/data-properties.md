@@ -71,13 +71,10 @@ A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930
 
 ## Data Property Implementation Approach
 
-Before we detail the use of `has rdfs:Literal value` etc. data properties, we will discuss OBI's philosophy about data properties in general. 
+Before we detail the use of `has rdfs:Literal value` etc. data properties, we will discuss OBI's philosophy about data properties in general.  An ontology **`data property`** is a relation from an entity instance straight to some literal datatype value (an RDF number, string or date for example) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property used to express that Lee's age is 12, as shown to the right. OBI shies away from this approach, as explained below.  
 
-<img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
-An ontology **`data property`** is a relation from an entity instance straight to some literal datatype value (an RDF number, string or date for example) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property used to express that Lee's age is 12, as shown to the right. OBI shies away from this approach, as explained below.  
-
-<br clear="right">
+<img src="/assets/images/docs/data_lee_data_property_age.png">
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_ages.png">
 

@@ -37,6 +37,10 @@ In this example, instance data shows `age measurement datum`  `is about` Lee. Cu
 
 <img src="/assets/images/docs/data_lee_age_value_specification.png">
 
+Here is a pH measurement datum value specification.
+
+<img src="/assets/images/docs/data_ph_measurement_vs.png">
+
 Note that different assays may output the same measurement datum and value specification combination.  For example an [`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156) and integer year value specification could be output from assays that calculate or estimate by input tree ring count, carbon 14 analysis, planting date, height of species etc.  It is up to an ontology implementer to define a more specific process as a sub-class of an existing general process if needed; if it falls within the scope of OBI, it may be a candidate for inclusion.
 
 Below, value specifications are used to supply catagorical values, units are provided, and qualities of parts of organisms are unambiguously described.
