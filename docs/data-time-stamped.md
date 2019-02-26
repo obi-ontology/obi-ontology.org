@@ -10,11 +10,11 @@ Process models and data items can be enhanced with time information in a few way
 
 - Assays and other processes can be marked with start and/or stop times, and therefore any specified output could have those time points to mark its relevance.
  
-- OBI provides time-stamped datum description by data properties directly, and via the value specification approach.
+- OBI provides time-stamped datum description by data properties directly, and via the value specification approach. **The diagrams below show how similar these are**.
 
 ## Time stamped data via datum parthood
 
-Originating in IAO, this structure illustrates datums being part of a datum, using `has measurement datum` and `has time stamp`, which are both `has part`subproperties to disambiguate the time dimension from the other (one or more) measurement datum components.
+Originating in IAO, this OBI structure illustrates datums being part of a datum, using `has measurement datum` and `has time stamp`, which are both `has part`subproperties to disambiguate the time dimension from the other (one or more) measurement datum components.
 
 Using:
 
@@ -39,7 +39,7 @@ Using:
     - `has time stamp` exactly 1 `time measurement datum` 
     - `has measurement datum` exactly 1 `geolocation coordinate datum`
 
-*Damion's note: I would advocate for using a new general `has content datum` rather than the `has measurement datum` for these expressions so that we don't have to set up a whole bunch of new entities to do the same thing for the other datum roles: predictions, settings, etc.*
+*Damion's note: I would advocate for using a new general `has content datum` rather than the `has measurement datum` OP for these expressions so that we don't have to set up a whole bunch of new entities to do the same thing for the other datum roles: predictions, settings, etc. E.g. suggests more of a fundamental `time stamped datum` rather than a role-specific `time stamped measurement datum`, which could be described using post-composition.*
 
 ## Time stamped data via value specifications
 
