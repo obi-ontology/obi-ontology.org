@@ -14,7 +14,7 @@ Process models and data items can be enhanced with time information in a few way
 
 ## Time stamped data via datum parthood
 
-Alan Ruttenberg, Melanie Courtot & others created this structure which is simple enough if connecting data properties directly; it would be rather complex if used with value specifications. It illustrates datums being part of a datum, using `part of` subproperties to disambiguate the time dimension from the other (one or more) measurement datum components.
+Originating in IAO, this structure illustrates datums being part of a datum, using `has measurement datum` and `has time stamp`, which are both `has part`subproperties to disambiguate the time dimension from the other (one or more) measurement datum components.
 
 Using:
 
@@ -27,24 +27,23 @@ Using:
  
 <img src="/assets/images/docs/data_timestamp_length.png">
 
-An example, using `has content datum` rather than `has measurement datum` when object isn't necessarily a measurement datum. `has time stamp` is a subproperty of `has part`.
-
     `time stamped measurement datum`:
     - `has time stamp` exactly 1 `time measurement datum` 
     - `has measurement datum` some `measurement datum`
 
     `geolocation coordinate datum`:
-    - `has content datum` exactly 1 `latitude datum` 
-    - `has content datum` exactly 1 `longitude datum`
+    - `has measurement datum` exactly 1 `latitude datum` 
+    - `has measurement datum` exactly 1 `longitude datum`
 
     `time stamped geolocation coordinate datum`:
     - `has time stamp` exactly 1 `time measurement datum` 
-    - `has content datum` exactly 1 `geolocation coordinate datum`
+    - `has measurement datum` exactly 1 `geolocation coordinate datum`
 
+*Damion's note: I would advocate for using a new general `has content datum` rather than the `has measurement datum` for these expressions so that we don't have to set up a whole bunch of new entities to do the same thing for the other datum roles: predictions, settings, etc.*
 
 ## Time stamped data via value specifications
 
-- Any datum's existing value specification(s) can be accompanied by a time value specification, effectively making it a 2-dimensional or n-dimensional observation. In other words, value specifications, as long as they are unambiguously about (`specifies value of`) different things, are additive. 
+- Any datum's existing value specification(s) can be accompanied by a time value specification, effectively making it a 2-dimensional or n-dimensional observation. In other words, value specifications, as long as they are unambiguously about (`specifies value of`) different things, are additive. Because of the underlying `part of` object property, thismany ways this resembles the datum-data property approach. 
 
 Here is a diagram showing a generic "time stamped measurement datum" that is about some time and quality.
 
