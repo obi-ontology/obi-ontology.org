@@ -15,7 +15,7 @@ The following documentation sections will focus on various parts needed to detai
 
 <img align="right" src="/assets/images/docs/data_john_mass_context_dp.png">
 
-([full-sized image](/assets/images/docs/data_john_mass_context.png){:target="_blank"})
+([full-sized image](/assets/images/docs/data_john_mass_context_dp.png){:target="_blank"})
 
 ## Material entities and their properties/qualities
 
