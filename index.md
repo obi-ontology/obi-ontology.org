@@ -15,6 +15,8 @@ header: |
 
 The Ontology for Biomedical Investigations (OBI) helps you communicate clearly about scientific investigations by defining more than 2500 terms for assays, devices, objectives, and more.
 
+[//]: # (Chris Stockart's defn: An ontology for representing biomedical investigations, including study designs, the collection and preparation of the targets of investigation, assays, instrumentation and reagents used, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation.)
+
 It's easy to use with many other
 [Open Biomedical Ontologies](http://obofoundry.org),
 including the [Gene Ontology](http://geneontology.org/),
