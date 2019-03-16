@@ -538,7 +538,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
         <rdfs:comment>This datum has either a number or a datetime value as well as a unit that is one of one of the SI unit dimensions or a composite thereof.</rdfs:comment>
-        <rdfs:label xml:lang="en">dimensional datum</rdfs:label>
+        <rdfs:label xml:lang="en">dimensional unit datum</rdfs:label>
     </owl:Class>
     
 
@@ -640,6 +640,13 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>There are other types of unit for time besides year/month/week/day/hour/minute/second/millisecond?  Quartz vibration?  Solar revolutions?  Moon revolutions?</rdfs:comment>
         <rdfs:label xml:lang="en">time datum</rdfs:label>
     </owl:Class>
     
@@ -2118,7 +2125,7 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000153">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
         <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
-        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-01T00:00:00</obo:EXAMPLE_00000009>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-01T00:00:00.0001</obo:EXAMPLE_00000009>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T06:52:09Z</dc:date>
         <rdfs:label xml:lang="en">Srin geolocation time</rdfs:label>
@@ -2312,71 +2319,10 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000001"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000003"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000015"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000016"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000017"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000023"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000024"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000041"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000042"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000080"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000081"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000082"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000084"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000085"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000086"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000089"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000090"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000091"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000092"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000104"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000105"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000106"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000108"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000115"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000117"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000123"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000134"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000144"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000145"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000146"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000150"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000151"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000152"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000153"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000155"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000157"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002201"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002202"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002203"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002204"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000008"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000009"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000010"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000035"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000036"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000196"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000422/EXAMPLE_00000001"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000003"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000090"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000123"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000157"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000010"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000035"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000036"/>
         </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
