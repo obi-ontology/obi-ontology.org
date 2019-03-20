@@ -814,8 +814,6 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T19:36:38Z</dc:date>
         <rdfs:label xml:lang="en">string datum</rdfs:label>
     </owl:Class>
     
@@ -1505,8 +1503,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0302910">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T08:13:09Z</dc:date>
         <rdfs:label xml:lang="en">prediction</rdfs:label>
     </owl:Class>
     
@@ -1536,8 +1532,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000104">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T09:23:36Z</dc:date>
         <rdfs:label xml:lang="en">diagnostic process</rdfs:label>
     </owl:Class>
     
@@ -1583,8 +1577,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000383">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000047"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T00:50:24Z</dc:date>
         <rdfs:label xml:lang="en">female</rdfs:label>
     </owl:Class>
     
@@ -1594,8 +1586,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000384">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000047"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T00:50:29Z</dc:date>
         <rdfs:label xml:lang="en">male</rdfs:label>
     </owl:Class>
     
@@ -1623,8 +1613,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001340">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000047"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T00:50:40Z</dc:date>
         <rdfs:label xml:lang="en">hermaphrodite</rdfs:label>
     </owl:Class>
     
@@ -1675,8 +1663,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000465">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T02:36:14Z</dc:date>
         <rdfs:label xml:lang="en">material anatomical entity</rdfs:label>
     </owl:Class>
     
@@ -1686,8 +1672,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000970">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T02:36:21Z</dc:date>
         <rdfs:label xml:lang="en">eye</rdfs:label>
     </owl:Class>
     
@@ -2320,6 +2304,7 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000003"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000080"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000090"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000123"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000157"/>
