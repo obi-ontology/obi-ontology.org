@@ -96,7 +96,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
-        <rdfs:label xml:lang="en">has unit label</rdfs:label>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -244,7 +244,9 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000999">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000026"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <rdfs:comment>Like &quot;has category label&quot; but no &quot;categorical measurement datum&quot; for domain.  &quot;categorical datum&quot; is INFERRED by &apos;has categorical choice&apos; eminating from a datum. Transitivity ok here?</rdfs:comment>
+        <rdfs:comment xml:lang="en">Like &quot;has category label&quot; but no &quot;categorical measurement datum&quot; for domain.  
+
+&quot;categorical datum&quot; can be INFERRED by &apos;has categorical choice&apos; eminating from a datum. Transitivity ok here?</rdfs:comment>
         <rdfs:label xml:lang="en">has categorical choice</rdfs:label>
     </owl:ObjectProperty>
     
@@ -322,6 +324,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
     <!-- http://purl.obolibrary.org/obo/STATO_0000403 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000403">
+        <rdfs:comment xml:lang="en">A STATO object property where datum approximates the quality or phenomena being measured. (Could be sub-property of &apos;is about&apos; ?)</rdfs:comment>
         <rdfs:label xml:lang="en">estimate of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -394,7 +397,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000078">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <obo:IAO_0000115 xml:lang="en">&apos;has textual representation&apos; attaches between a datum and a string value that contains linguistically or computationally coded text.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">&apos;has textual representation&apos; attaches between a datum and a string value that contains linguistically or computationally coded text from which the datum can be derived.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">has textual representation</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -608,7 +611,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment>Note: owl:real doesn&apos;t seem to include xsd:decimal; had to add that to prevent decimal, integer datum unsatisfiability.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Note: in equivalency expression, owl:real doesn&apos;t seem to cover xsd:decimal; had to add xsd:decimal to allow decimal, integer datums to be covered.</rdfs:comment>
         <rdfs:label xml:lang="en">scalar datum</rdfs:label>
     </owl:Class>
     
@@ -774,6 +777,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+        <obo:IAO_0000115 xml:lang="en">An atomic literal datum is a datum having a single value whose data type conforms to the OWL rdfs:Literal datatype scheme.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">atomic literal datum</rdfs:label>
     </owl:Class>
     
@@ -794,6 +798,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115 xml:lang="en">A composite datum is a datum that has one or more atomic or composite datums as parts.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">composite datum</rdfs:label>
     </owl:Class>
     
@@ -894,6 +899,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Illustrates how to infer a datum class by value xsd:datatype</rdfs:comment>
         <rdfs:label xml:lang="en">resource URI datum</rdfs:label>
     </owl:Class>
     
@@ -968,7 +974,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment>This is just experimental.  Its purpose is to categorize count fields.
+        <rdfs:comment xml:lang="en">This is just experimental.  Its purpose is to determine which xsd:integers reasoners will infer.
 
 The test on xsd:integer is causing OWL to look at &apos;has literal value&apos; to see if it fits integer without any conversion loss, i.e. no decimal point in number.</rdfs:comment>
         <rdfs:label xml:lang="en">integer datum</rdfs:label>
@@ -1036,8 +1042,7 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000581"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1051,6 +1056,20 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000147">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000141"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000148"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000141"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000149"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T06:46:30Z</dc:date>
@@ -1093,6 +1112,7 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Illustrates how to infer a datum class by value xsd:datatype</rdfs:comment>
         <rdfs:label xml:lang="en">boolean datum</rdfs:label>
     </owl:Class>
     
@@ -2109,7 +2129,7 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000153">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
         <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
-        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-01T00:00:00.0001</obo:EXAMPLE_00000009>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-01T00:00:00</obo:EXAMPLE_00000009>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T06:52:09Z</dc:date>
         <rdfs:label xml:lang="en">Srin geolocation time</rdfs:label>
@@ -2120,10 +2140,10 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000155 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000155">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000156"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000123"/>
         <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</obo:EXAMPLE_00000009>
-        <rdfs:comment>Simple boolean datum example about whether Srin has had tonsil removed or not.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Simple boolean datum example about whether Srin has had tonsil removed or not. Here type is &apos;atomic literal datum&apos; just to show that &apos;boolean datum&apos; is inferred in this case.</rdfs:comment>
         <rdfs:label xml:lang="en">Srin tonsil present datum</rdfs:label>
     </owl:NamedIndividual>
     

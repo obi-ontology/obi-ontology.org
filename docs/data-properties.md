@@ -22,7 +22,7 @@ OBI can attach a number of [OWL-compatible RDF/XML datatype](https://www.w3.org/
 
 - A [`xsd:boolean`](???) datum represents a yes/no or true/false value.  See [Boolean Datums](/docs/datatype-boolean/).
 
-#### String datum
+#### String datum 
 
 - A [`xsd:string`](???) textual datum can at the very least be compared to other strings.  See [String Datums](/docs/datatype-string/).  Example: The (fictitious) [`Social Security Number`](http://purl.obolibrary.org/obo/NCIT_C25686) "000-11-2222", an identifier which serves a data matchmaking role, and which is for practical purposes atomic (although sub-sequences of 0's do signal fictitious records).
 
@@ -41,11 +41,7 @@ A specific numeric datatype can be indicated to capture the numeric type of a sp
 
 - [`xsd:dateTime`](???)  for a datum containing a xsd:dateTime formatted date or time, or [`xsd:dateTimeStamp`](???), which includes time zone too.  Details are in [Date, Time, and Duration Datums](/docs/datatype-time/); examples of use are in the [Time stamped data](/docs/data-time-stamped/) section.
 
-<!--
-### Scalar value specification compatible
-
-OBI implementers may prefer to isolate the value data collected from assays from the [`measurement datum`](http://purl.obolibrary.org/obo/IAO_0000109) representation level of assay output.  OBI provides a [`has value specification`]() object property that points to a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) which can take on the same value and measurement unit label data and object properties as described above.  See [docs/data-vs](docs/data-vs) for more details.
--->
+[//]: #(### Scalar value specification compatible: OBI implementers may prefer to isolate the value data collected from assays from the [`measurement datum`](http://purl.obolibrary.org/obo/IAO_0000109) representation level of assay output.  OBI provides a [`has value specification`]() object property that points to a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) which can take on the same value and measurement unit label data and object properties as described above.  See [docs/data-vs](docs/data-vs) for more details.)
 
 ### Categorical value specification compatible
 
