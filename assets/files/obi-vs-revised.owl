@@ -120,7 +120,7 @@
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000999"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="en">Testing property chain:
+        <rdfs:comment xml:lang="en">Testing property chain - inferrs that the categorical unit choice being input to a measurement process yields a &apos;has unit&apos; association of output datum to that unit. Final version would need reflexive checks on appropriate input / output entities.
 
 is_specified_output_of o has_specified_input o &apos;has categorical choice&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">has unit</rdfs:label>
@@ -181,6 +181,13 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
     <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000312"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Testing aboutness inference - that the output of a process is about the input.
+
+is_specified_output_of o has_specified_input</rdfs:comment>
         <rdfs:label xml:lang="en">is about</rdfs:label>
     </owl:ObjectProperty>
     
@@ -590,17 +597,27 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000011">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000119"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000148"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000149"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C16358"/>
+                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
-        <rdfs:comment>This datum has either a number or a datetime value as well as a unit that is one of one of the SI unit dimensions or a composite thereof.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This datum has either a number or a datetime value as well as a unit that is one of one of the SI unit dimensions or a composite thereof.
+
+Closing off this class speeds up reasoning.</rdfs:comment>
         <rdfs:label xml:lang="en">dimensional unit datum</rdfs:label>
     </owl:Class>
     
@@ -637,6 +654,13 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000018"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Testing 
+
+subClassOf:
+
+has_specified_input some &apos;ounce / gram unit setting&apos;
+has_specified_output some &apos;ACME™ precision balance datum&apos;
+&apos;has performer&apos; some &apos;ACME Precision Balance&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">ACME precision balance assay</rdfs:label>
     </owl:Class>
     
@@ -656,6 +680,10 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Does this lead to circular / wasteful reasoning?
+
+&apos;mass measurement datum&apos;
+ and (is_specified_output_of some &apos;ACME precision balance assay&apos;)</rdfs:comment>
         <rdfs:label xml:lang="en">ACME™ precision balance datum</rdfs:label>
     </owl:Class>
     
@@ -664,10 +692,10 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
     <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000025 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000025">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000140"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000999"/>
                         <owl:someValuesFrom>
@@ -679,20 +707,15 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                             </owl:Class>
                         </owl:someValuesFrom>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000999"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:oneOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000020"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000021"/>
-                                </owl:oneOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
+        <rdfs:comment xml:lang="en">Testing: It appears to be a burden on reasoner to put the settings into an equivalence statement:
+
+equivalentTo
+&apos;setting datum&apos;
+ and &apos;has categorical choice&apos; some { gram , ounce}</rdfs:comment>
         <rdfs:label xml:lang="en">ounce / gram unit setting</rdfs:label>
     </owl:Class>
     
@@ -704,7 +727,6 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
@@ -725,6 +747,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -751,6 +774,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
                                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
                                     <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
                                     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#real"/>
                                 </owl:unionOf>
                             </rdfs:Datatype>
@@ -769,28 +793,19 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000066">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
-                    <owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000119"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
-                                <owl:someValuesFrom>
-                                    <rdfs:Datatype>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
-                                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-                                        </owl:unionOf>
-                                    </rdfs:Datatype>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
                         </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
@@ -798,7 +813,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>There are other types of unit for time besides year/month/week/day/hour/minute/second/millisecond?  Quartz vibration?  Solar revolutions?  Moon revolutions?</rdfs:comment>
-        <rdfs:label xml:lang="en">time datum</rdfs:label>
+        <rdfs:label xml:lang="en">time calendar datum</rdfs:label>
     </owl:Class>
     
 
@@ -858,7 +873,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000999"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -875,7 +890,6 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
@@ -887,6 +901,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -956,15 +971,10 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000111">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
         <rdfs:label xml:lang="en">string datum</rdfs:label>
@@ -1059,7 +1069,6 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
@@ -1072,14 +1081,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Duration would be a subClass of time datum, but then the equivalency axiom would have to be duplicated in time datum</rdfs:comment>
-        <rdfs:label xml:lang="en">duration datum</rdfs:label>
+        <rdfs:label xml:lang="en">time duration datum</rdfs:label>
     </owl:Class>
     
 
@@ -1088,8 +1090,9 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000129">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
-        <rdfs:comment xml:lang="en">(&apos;has unit&apos; some &apos;unit label&apos;)
- and (&apos;has literal value&apos; some xsd:decimal)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is essentially equivalent to &quot;dimensional unit datum&quot;
+
+Tried adding equivalency that would catch both integer and decimal values but only decimal values get through due to integer subClass somehow.</rdfs:comment>
         <rdfs:label xml:lang="en">scalar value specification</rdfs:label>
     </owl:Class>
     
@@ -1099,16 +1102,12 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000136">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000140"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000140"/>
         <rdfs:comment xml:lang="en">This is just experimental.  Its purpose is to determine which xsd:integers reasoners will infer.
 
 The test on xsd:integer is causing OWL to look at &apos;has literal value&apos; to see if it fits integer without any conversion loss, i.e. no decimal point in number.</rdfs:comment>
@@ -1121,16 +1120,12 @@ The test on xsd:integer is causing OWL to look at &apos;has literal value&apos; 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000139">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000140"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000140"/>
         <rdfs:comment>This is just experimental.  OWL is checking to see which atomic datum &apos;has literal value&apos; numbers include a decimal point; those that don&apos;t are integers and are filtered out. 
 
 One can also manually declare a datum to be numeric, decimal or integer.</rdfs:comment>
@@ -1144,25 +1139,16 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000140">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
-                        <owl:someValuesFrom>
-                            <rdfs:Datatype>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
-                                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#real"/>
-                                </owl:unionOf>
-                            </rdfs:Datatype>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000136"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000139"/>
+                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
-        <rdfs:comment>This is just experimental</rdfs:comment>
+        <rdfs:comment>This is just experimental.  Testing
+
+Due to integer subClass of decimal, the integer instances aren&apos;t being listed here I think.</rdfs:comment>
         <rdfs:label xml:lang="en">numeric datum</rdfs:label>
     </owl:Class>
     
@@ -1194,6 +1180,7 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000141"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000148"/>
@@ -1383,6 +1370,12 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
         </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000445"/>
             </owl:Restriction>
@@ -1554,7 +1547,17 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <!-- http://purl.obolibrary.org/obo/OBI_0000070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000070">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHMO_0002354"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000113"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000445"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:comment xml:lang="en">Closing off assay really speeds up reasoning. This would have to be relaxed though to enable other ontologies to position their own assay terms.</rdfs:comment>
         <rdfs:label xml:lang="en">assay</rdfs:label>
     </owl:Class>
     
@@ -1570,10 +1573,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1630,12 +1629,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001929">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000129"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000131"/>
@@ -2042,6 +2035,7 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000029">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000018"/>
         <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70000</obo:EXAMPLE_00000009>
+        <rdfs:comment xml:lang="en">If one activates the property chains for &apos;has unit&apos; and &apos;is about&apos;, one will see inferences of both here. However, its a bit odd that &apos;is about&apos; inferences appear equally about John, and about the &apos;ACME balance unit setting&apos;, though technically true!</rdfs:comment>
         <rdfs:label xml:lang="en">ACME balance datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2259,8 +2253,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000108">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0000122"/>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T19:21:54Z</dc:date>
         <rdfs:label xml:lang="en">john length quality</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2326,10 +2318,8 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000145 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000145">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
         <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-01T00:00:00</obo:EXAMPLE_00000009>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T06:33:31Z</dc:date>
+        <rdfs:comment xml:lang="en">Shows inference of time calendar datum</rdfs:comment>
         <rdfs:label xml:lang="en">Srin time datum</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2386,8 +2376,6 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
         <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
         <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-01T00:00:00</obo:EXAMPLE_00000009>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T06:52:09Z</dc:date>
         <rdfs:label xml:lang="en">Srin geolocation time</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2567,10 +2555,38 @@ One can also manually declare a datum to be numeric, decimal or integer.</rdfs:c
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHMO_0002354"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000113"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000445"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000119"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000148"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000149"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C16358"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000111"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000118"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000156"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000414"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000416"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001167"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
