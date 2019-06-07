@@ -55,7 +55,7 @@ Please cite [The Ontology for Biomedical Investigations](https://www.ncbi.nlm.ni
 ## Contact Us
 
 - OBI users mailing list [obi-users@googlegroups.com](mailto:obi-users@googlegroups.com) on [Google Groups](https://groups.google.com/forum/#!forum/obi-users).
-- OBI developers mailing list [obi-devel@lists.sourceforge.net](mailto:obi-devel@lists.sourceforge.net) [subscription form](https://sourceforge.net/projects/obi/lists/obi-devel)
+- OBI developers mailing list [obi-devel@lists.sourceforge.net](mailto:obi-devel@lists.sourceforge.net) ([subscription form](https://sourceforge.net/projects/obi/lists/obi-devel))
 - issue tracker: <https://github.com/obi-ontology/obi/issues>
 - weekly conference call, Mondays at 9:00 AM Pacific, 12:00 noon Eastern
     - Zoom web conference <https://zoom.us/j/438753421>
