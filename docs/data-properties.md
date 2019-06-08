@@ -64,6 +64,10 @@ Before we detail the use of `has literal value` etc. data properties, we will di
 
 The label of the data property tells humans in hopefully plain language what the value is about, but a reasoner will have a bad time guessing what the relation is equivalent to in other graphs that have differently named or identified relations that mean the same thing.  As shown, the problem is magnified if other age quantities are involved.
 
+This issue is called "property reification" as explained [here](http://smiy.sourceforge.net/prv/spec/propertyreification.html) and [here](https://www.w3.org/wiki/PropertyReificationVocabulary), to quote: 
+
+    "A significant weakness of RDF is its lack of an elegant method of expressing more information about relations between resources. [...] In response to this, vocabulary designers sometimes add classes which are equivalent to the original property, but can express additional information. This is a form of reification on the vocabulary level, instead of using the RDF Reification mechanism."
+
 A second problem is revealed in the age example - is John 12 years old or 12 months? Has it been 19 months since he was fertilized or 19 years! A general way to provide units is required.
 
 <br clear="right">
