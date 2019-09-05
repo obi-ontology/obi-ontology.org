@@ -15,7 +15,7 @@ This provides a basic model for how OBI structures a theoretical description of 
 
 OBI's scheme for generating linked data that describe experiments (at least down to the protocol level) is illustrated in the following figure: 
 
-![Domains and Ranges for Object Properties](/assets/images/docs/obi_schema.png)
+![Domains and Ranges for Object Properties](/assets/images/docs/obi_investigation.png)
 
 Any [`planned process`](http://purl.obolibrary.org/obo/OBI_0000011) can specify substructure through the [`has part`](http://purl.obolibrary.org/obo/BFO_0000051) object property. Usually an [`investigation`](http://purl.obolibrary.org/obo/OBI_0000066) is the focus of our interest, and is linked to a [`study design execution`](http://purl.obolibrary.org/obo/OBI_0000471) that may then be made up of individuals made from three classes of processes that are used in scientific protocols: [`material processing`](http://purl.obolibrary.org/obo/OBI_0000094), [`assay`](http://purl.obolibrary.org/obo/OBI_0000070), and [`information content entity`](http://purl.obolibrary.org/obo/OBI_0200000). 
 
