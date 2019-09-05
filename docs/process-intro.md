@@ -11,9 +11,11 @@ sidebar:
 
 Generally a **[`process`](http://purl.obolibrary.org/obo/BFO_0000015)** can have other processes as parts, and can have instances with start and end times associated with them.  A **[`planned process`](http://purl.obolibrary.org/obo/OBI_0000011)** is carried out by one or more agent participants (devices, people, even organizations) who are guided by a **[`plan specification`](http://purl.obolibrary.org/obo/IAO_0000104){:target="_blank"}**, an ICE which has **[`objective`](http://purl.obolibrary.org/obo/IAO_0000005)** and **[`action`](http://purl.obolibrary.org/obo/IAO_0000007)** components. A **[`study design`](http://purl.obolibrary.org/obo/OBI_0500000)** and its **[`protocol`](http://purl.obolibrary.org/obo/OBI_0000272)** part(s) are subclasses of `plan specification`. This is documented in the [`Core Classes`](/docs/core-classes/) page.
 
-<img align="right" src="/assets/images/docs/data_assay.png">
+<img src="/assets/images/docs/obi_process.png">
 
 A **process / datum model diagram** shows how material entities or data items can be an input or output of some process. This diagram often includes parts of entity property diagrams in order to reference components as inputs or in aboutness clauses.
+
+<img align="right" src="/assets/images/docs/data_assay.png">
 
 The **[`assay`](http://purl.obolibrary.org/obo/OBI_0000070)** process diagram to right details axioms that enable types of assay to inherit requirements: [paraphrasing] that an assay input is a material entity playing an evaluant role, and that an assay outputs one or more data items.
 
