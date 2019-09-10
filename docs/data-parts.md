@@ -7,7 +7,7 @@ sidebar:
   nav: "docs"
 ---
 
-In the case where a value specification and/or measurement datum is about the conjunction of a few different things, the aboutness target can be a postcomposed expression of those components, with one component, usually a quality, providing the primary type of the measure.  For example "eye color" is primarily about color - and so limited to ways that can be reported, but secondarily about the body part being observed, and finally - in the instance, references a particular organism being observed. 
+In the case where a value specification and/or measurement datum is about the conjunction of a few different things, the aboutness target can be a postcomposed expression of those components, with one component, usually a quality, providing the primary type of the measure.  For example "eye color" is primarily about color - and so limited to ways that can be reported, but secondarily about the body part being observed, and finally, in the instance, references a particular organism being observed. 
 
 <img align="right" src="/assets/images/docs/data_john_eye.png">
 
