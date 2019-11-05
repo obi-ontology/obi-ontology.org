@@ -4,18 +4,12 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size:1.5em;
-}
-
-img {
-  max-width: 730px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .main-content,
 .footer {
-  margin-left:200px;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -34,26 +28,10 @@ img {
 
 /* Custom page footer */
 .footer {
-  padding: 20px 20px 0 20px;
+  padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
-#doc-nav-wrapper {
-    padding-left:10px;
-    padding-top:10px;
-    border-top:2px solid silver;
-    border-left:2px solid silver;
-}
-#doc-nav {
-  overflow-y: auto;
-  height: 50vh;
-  display:block;
-  position:relative;
-
-}
-
-#doc-nav hr {margin-bottom:3px;}
-
 
 /* Customize container */
 @media (min-width: 768px) {
@@ -83,20 +61,15 @@ img {
   margin-top: 28px;
 }
 
-img {  
-  max-width: 100%;
-  height: auto;
-}
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
   .header,
   .main-content,
-  /*.footer {
+  .footer {
     padding-right: 0;
     padding-left: 0;
-  }*/
+  }
   /* Space out the masthead */
   .header {
   }
@@ -108,14 +81,3 @@ img {
   }
 }
 
-/* ensures documentation scrollbar is visible. */
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: rgba(0,0,0,.5);
-  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-}
