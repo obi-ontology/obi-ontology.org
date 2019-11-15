@@ -1,8 +1,10 @@
 # obi-ontology.org
 
-This is a first draft of a new website for the Ontology for Biomedical Investigations. It will contain an overview and documentation for the project. We want to replace the current MediaWiki site as soon as possible with a minimal new OBI website, then build from there.
+This is the Jekyll template driven Ontology for Biomedical Investigations website. It will contain an overview and documentation for the project. 
 
-This site is build using [GitHub Pages](https://pages.github.com). Help with the content (and styling!) is appreciated.
+This site is build using Jekyl templated [GitHub Pages](https://pages.github.com). Help with the content (and styling!) is appreciated.
+
+Assuming you have cloned this repository and that ruby and jekyll are loaded up on your computer (see: https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll), you can edit and preview these pages locally by opening a terminal at the folder, and issuing command line: "jekyll serve" which by default serves them up to http://127.0.0.1:4000/docs/ 
 
 A preview of this new site is avaiable: <https://obi-ontology.github.io/obi-ontology.org>.
 

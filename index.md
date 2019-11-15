@@ -13,8 +13,6 @@ header: |
   </div>
 ---
 
-[//]: # (You can preview these pages locally by opening a terminal at the folder, and issuing command line: "bundle exec jekyll serve" which by default serves them up to http://127.0.0.1:4000/docs/ .  Assumes ruby, jekyll and bundle loaded up on your user account, see: https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
-
 The Ontology for Biomedical Investigations (OBI) helps you communicate clearly about scientific investigations by defining more than 2500 terms for assays, devices, objectives, and more.
 
 It's easy to use with many other
