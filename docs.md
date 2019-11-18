@@ -28,9 +28,7 @@ This user manual is designed to explain the core functionality of OBI for newcom
 
 More background and detail on OBI vocabulary and functionality is available in papers listed on the [Media](/media/) page.
 
-Most documentation diagrams are contained in [/assets/files/data_obi4.drawio](/assets/files/data_obi4.drawio) and [/assets/files/obi-assay-examples.drawio](/assets/files/obi-assay-examples.drawio) files, in [draw.io](http://draw.io) diagram format for reuse in ontology design work.  A few visual design principles are at work: The diagrams usually skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.  Process inputs and outputs generally flow left to right; superclass/subclass is-a relations are vertical, and upper-level categories of entity are color-coded.
-
-<!-- Instance data for a number of the examples is provided in a [/assets/files/obi-examples.owl](/assets/files/obi-examples.owl) which can be viewed on its own in Protege, or by including it as an ontology import in OBI (or visa versa). -->
+A page that shows documentation diagrams may also provide a link to the [draw.io](http://draw.io) diagram file for reuse in ontology design work (e.g.  [core-classes.drawio](/assets/images/docs/core-classes/core-classes.drawio).  A few visual design principles are at work: The diagrams usually skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.  Process inputs and outputs generally flow left to right; superclass/subclass is-a relations are vertical, and upper-level categories of entity are color-coded.
 
 In the documentation, the first usage of an ontology term like [`patient role`](http://purl.obolibrary.org/obo/OBI_0000093) is hyperlinked to its PURL (permanent URL) web addresses for easy reference, usually on the Ontobee lookup servce where its position in the class hierarchy is shown, as well as equivalency and other subclass axioms, synonyms, definition, etc.
 
