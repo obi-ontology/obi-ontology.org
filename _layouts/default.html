@@ -23,36 +23,81 @@
   </head>
   <body>
 
-    <div class="container">
+      <header style="width:200px; float: left;padding-left:15px; position:fixed">
+        <a href="/"> <h1 align="right">OBI</h1></a>
+        <hr size="1" style="border-top:3px solid #eee" />
 
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/#cite-obi">Cite OBI</a></li>
-            <li role="presentation"><a href="/page/OBI_term_guidelines">Term Requests</a></li>
-            <li role="presentation"><a href="/#contact-us">Contact Us</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted"><a href="/">OBI</a></h3>
+        <p align="right">
+
+          <a href="/term-guidelines">Term Guidelines</a><br>
+          <a href="/projects">Projects</a><br>
+          <a href="/media">Media</a><br>
+          <a href="/docs">Documentation</a><br>
+        </p>
+
+
+        {% if page.url contains "/docs/" %}
+
+        <div id="doc-nav-wrapper">
+          <div id="doc-nav">
+            <div>
+              <b>OBI Core</b><br>
+              <!-- a href="/docs/core-model/">Core Model</a><br> -->
+              <a href="/docs/core-classes/">Core Classes</a><br>
+              <!--
+              <br>
+              <b>Data Modelling</b><br>
+              <a href="/docs/data-intro/">Introduction</a></br>
+              <a href="/docs/data-ice/">Information Content Entities</a></br>
+              <a href="/docs/process-intro/">Process Basics</a></br>
+              <a href="/docs/process-timing/">Process Timing</a></br>
+              <a href="/docs/data-properties/">Data Properties</a></br>
+              <a href="/docs/data-vs/">Value Specifications</a></br>
+              <a href="/docs/data-bmi/">Body Mass Index Example</a></br>
+              <a href="/docs/data-precomposed/">Precomposed Terms</a></br>
+              <a href="/docs/data-parts/">Describing Parts</a></br>
+              <a href="/docs/data-time-stamped/ ">Time stamped Data</a></br>
+              <a href="/docs/data-sets/">Datasets</a></br>
+
+              <br>
+              <b>Data Types</b><br>
+              <a href="/docs/datatypes/">Introduction</a><br>
+              <a href="/docs/datatype-numeric/">Numeric</a><br>
+              <a href="/docs/datatype-string/">String</a><br>
+              <a href="/docs/datatype-categorical/">Categorical</a><br>
+              <a href="/docs/datatype-boolean/">Boolean</a><br>
+              <a href="/docs/datatype-time/">Date, Time, Duration</a><br>
+              -->
+              <br>
+              <a href="/docs/robot-intro/"><b>ROBOT Templates</b></a><br>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </header>
+
+      <div style="min-width: 500px; max-width:750px; margin-left: 230px;margin-right:30px">
+
+        {% if page.url == "/" %}
+
+          <h1>{{ page.header }}</h1>
+
+        {% else %}
+
+          <h1>{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}</h2>
+
+        {% endif %}
+        
+        <div style="padding-top:30px">
+          {{ content }}
+        </div>
       </div>
 
-      {{ page.header }}
-
-      <div class="row main-content">
-        {{ content }}
-      </div>
+      <br style="clear: both">
 
       <footer class="footer">
-        <p>&copy; 2018 OBI</p>
+        <p>&copy; 2019 OBI</p>
       </footer>
 
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-    {{ page.scripts }}
   </body>
 </html>
