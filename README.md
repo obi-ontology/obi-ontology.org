@@ -4,9 +4,7 @@ This is the Jekyll template driven Ontology for Biomedical Investigations websit
 
 This site is build using Jekyl templated [GitHub Pages](https://pages.github.com). Help with the content (and styling!) is appreciated.
 
-Assuming you have cloned this repository and that ruby and jekyll are loaded up on your computer (see: https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll), you can edit and preview these pages locally by opening a terminal at the folder, and issuing command line: "jekyll serve" which by default serves them up to http://127.0.0.1:4000/docs/ 
-
-A preview of this new site is avaiable: <https://obi-ontology.github.io/obi-ontology.org>.
+Assuming you have cloned this repository and that ruby and jekyll are loaded up on your computer (see: https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll), you can edit and preview these pages locally by opening a terminal at the folder, and issuing command line: "jekyll serve" which by default serves them up to http://127.0.0.1:4000/docs/
 
 
 ## License
