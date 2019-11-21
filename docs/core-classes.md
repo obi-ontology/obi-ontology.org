@@ -16,7 +16,7 @@ This provides a basic model for how OBI models a biomedical investigation.  Alth
 OBI's scheme for generating linked data that describe experiments (at least down to the protocol level) is illustrated in the following figure: 
 
 ![Study Design Core Concepts](/assets/images/docs/core-classes/obi_investigation.png)
-([core-classes.drawio](https://raw.githubusercontent.com/obi-ontology/obi-ontology.org/master/assets/images/docs/core-classes/core-classes.drawio))
+([core-classes.drawio](https://www.draw.io/#Uhttps%3A%2F%2Fobi-ontology.ontodev.com%2Fassets%2Fimages%2Fdocs%2Fcore-classes%2Fcore-classes.drawio))
 
 Any ['planned process'](http://purl.obolibrary.org/obo/OBI_0000011) can specify substructure through the ['has part'](http://purl.obolibrary.org/obo/BFO_0000051) object property. An ['investigation'](http://purl.obolibrary.org/obo/OBI_0000066) is a 'planned process' that has a ['study design execution'](http://purl.obolibrary.org/obo/OBI_0000471) as its main part. A 'study design execution' often has parts of three main types: ['material processing'](http://purl.obolibrary.org/obo/OBI_0000094), ['assay'](http://purl.obolibrary.org/obo/OBI_0000070), and ['information content entity'](http://purl.obolibrary.org/obo/OBI_0200000). 
 
