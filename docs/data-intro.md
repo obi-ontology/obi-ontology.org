@@ -20,7 +20,7 @@ The five ovals in four colors help divide the diagram into broad categories:
 - the measurement datum (gray), which is an ['information artifact'](http://purl.obolibrary.org/obo/IAO_0000030)
 - the "70kg" part of the measurement, called a 'value specification', which is another sort of 'information artifact'
 
-Note that although the diagram shows a full set of OBI classes that are potentially connected to john's mass, particular reuse of OBI in application ontologies may be much simpler, and skip the process modeling part, the value specification part or the datum part.
+Note that although the diagram shows a full set of OBI classes that are potentially connected to John's mass, reuse of OBI in speicific applications may be much simpler, skipping the process modeling part, the value specification part or the datum part.
 
 In the following sections we discuss each oval, the various classes (boxes) and arrows (object properties and data properties) within it.  
 
