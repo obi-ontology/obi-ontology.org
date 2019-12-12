@@ -17,7 +17,9 @@ The 'information content entity' **['data item'](http://purl.obolibrary.org/obo/
 * A **['settings datum'](http://purl.obolibrary.org/obo/IAO_0000140)** class which enables modeling an apparatus control input.
 * A **['predicted data item'](http://purl.obolibrary.org/obo/OBI_0302867)** class that applies to output of a ['prediction'](http://purl.obolibrary.org/obo/OBI_0302910) process.
 
-A datum may have an associated value, captured in a ['value specification'](http://purl.obolibrary.org/obo/OBI_0001933) or a ['has representation'](http://purl.obolibrary.org/obo/OBI_0002815) that points to any XSD datatype Literal value. More on this to come.
+A data item (aka datum) may have an associated ['value specification'](http://purl.obolibrary.org/obo/OBI_0001933) that holds a numeric or categorical value, or may have a textually-encoded, parsable ['has representation'](http://purl.obolibrary.org/obo/OBI_0002815) data property that points to any XSD Literal value such as the string "20g" or "Every thursday". More on this to come.
+
+<center><img src="/assets/images/docs/data-ice/data_ice_branch2.png"></center>
 
 (Diagram: [data-ice.drawio](https://www.draw.io/#Uhttps%3A%2F%2Fobi-ontology.org%2Fassets%2Fimages%2Fdocs%2Fdata-ice%2Fdata-ice.drawio))
 
