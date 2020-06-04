@@ -13,3 +13,9 @@ Contact us to add your ontology-driven project if it makes use of OBI!
 The Genomic Epidemiology Ontology (GenEpiO) project aims to develop a more comprehensive controlled vocabulary for infectious disease surveillance and outbreak investigations. To support foodborn disease informatics, FoodOn, an offshoot of GenEpiO and ENVO, describes food samples by organism, ingredient, packaging, food processing history etc.. GEEM is a software tool to take standards composed within ontologies according to OBI value specifications, and turn them into JSON, HTML form, and other formats for use in software to support data validation and exchange.
 
 
+
+### Immune Epitope Database and Analysis Project
+
+[iedb.org](https://iedb.org)
+
+The Immune Epitope Database (IEDB) is a freely available resource funded by NIAID. It catalogs experimental data on antibody and T cell epitopes studied in humans, non-human primates, and other animal species in the context of infectious disease, allergy, autoimmunity and transplantation. The IEDB also hosts tools to assist in the prediction and analysis of epitopes.
