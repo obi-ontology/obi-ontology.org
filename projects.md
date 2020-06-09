@@ -19,3 +19,10 @@ The Genomic Epidemiology Ontology (GenEpiO) project aims to develop a more compr
 [iedb.org](https://iedb.org)
 
 The Immune Epitope Database (IEDB) is a freely available resource funded by NIAID. It catalogs experimental data on antibody and T cell epitopes studied in humans, non-human primates, and other animal species in the context of infectious disease, allergy, autoimmunity and transplantation. The IEDB also hosts tools to assist in the prediction and analysis of epitopes.
+
+
+
+###Human Immunology Project Consortium (HIPC)
+
+[hipc.org](https://www.immuneprofiling.org/hipc)
+The Human Immunology Project Consortium (HIPC) program was established in 2010 by the NIAID Division of Allergy, Immunology, and Transplantation as part of the overall NIAID focus on human immunology. Through this program, well-characterized human cohorts are studied using a variety of modern analytic tools, including multiplex transcriptional, cytokine, and proteomic assays; multiparameter phenotyping of leukocyte subsets; assessment of leukocyte functional status; and multiple computational methods. The HIPC program provides centralized research resources and comprehensive, centralized databases for use by the greater scientific community, including the Immunology Database and Analysis Portal (ImmPort) (https://www.immport.org/),  offering advanced information technology support in the archiving and exchange of scientific data as an extensive data warehouse containing experimental data and metadata.
