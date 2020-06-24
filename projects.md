@@ -26,3 +26,9 @@ The Immune Epitope Database (IEDB) is a freely available resource funded by NIAI
 
 [hipc.org](https://www.immuneprofiling.org/hipc)
 The Human Immunology Project Consortium (HIPC) program was established in 2010 by the NIAID Division of Allergy, Immunology, and Transplantation as part of the overall NIAID focus on human immunology. Through this program, well-characterized human cohorts are studied using a variety of modern analytic tools, including multiplex transcriptional, cytokine, and proteomic assays; multiparameter phenotyping of leukocyte subsets; assessment of leukocyte functional status; and multiple computational methods. The HIPC program provides centralized research resources and comprehensive, centralized databases that utilize formal data standards and includes the Immunology Database and Analysis Portal (ImmPort) (https://www.immport.org/), offering advanced information technology support in the archiving and exchange of scientific data as an extensive data warehouse containing experimental data and metadata.
+
+### Chemical Effects in Biological Systems (CEBS)
+
+[CEBS Search](https://manticore.niehs.nih.gov/cebssearch)
+
+The CEBS database houses data of interest to environmental health scientists. CEBS is a public resource, and has received depositions of data from academic, industrial, and governmental laboratories. CEBS is designed to display data in the context of biology and study design, and permit data integration across studies for novel meta analysis. OBI is used by CEBS to model studies, and improve search and analysis.
