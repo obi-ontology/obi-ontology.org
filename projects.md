@@ -42,6 +42,13 @@ The Evidence and Conclusion Ontology (ECO) has been developed to describe types 
 ECO and OBI have an ongoing collaboration to create terms in OBI that correspond to assays and protocols underlying terms in ECO. In addition, ECO uses logical axioms linking to OBI assay terms to precisely define ECO terms.
 
 
+### Gemma
+
+[gemma.chibi.ubc.ca](http://gemma.chibi.ubc.ca)
+
+Gemma is a web site, database and a set of tools for the meta-analysis, re-use and sharing of genomics data, currently primarily targeted at the analysis of gene expression profiles. Gemma contains data from thousands of public studies, referencing thousands of published papers. Users can search, access and visualize coexpression and differential expression results.
+
+
 ### Genomic Epidemiology Ontology (GenEpiO), The FoodOn food ontology, and the Genomic Epidemiology Entity Mart (GEEM)
 
 [genepio.org](https://genepio.org), [foodon.org](https://foodon.org), [genepio.org/geem](https://genepio.org/geem)
@@ -69,6 +76,12 @@ The Immune Epitope Database (IEDB) is a freely available resource funded by NIAI
 
 MicrobiomeDB is a data-mining platform for interrogating microbiome experiments. MicrobiomeDB was developed as a discovery tool that empowers researchers to fully leverage their experimental metadata to construct queries that interrogate microbiome datasets. It is associated with VEuPathDB uses the OBI-based VEuPathDB ontology. Partial support for MicrobiomeDB has come from the Bill & Melinda Gates Foundation
 
+
+### Neuroscience Information Framework
+
+[neuinfo.org](http://neuinfo.org)
+
+The Neuroscience Information Framework (NIF) is a dynamic inventory of Web-based neuroscience resources, data, and tools accessible via any computer connected to the Internet. An initiative of the NIH Blueprint for Neuroscience Research, NIF advances neuroscience research by enabling discovery and access to public research data and tools worldwide through an open source, networked environment.The NIF project is designed to serve the biomedical research community. The more participation from the community, the better the NIF. We welcome all feedback and suggestions and are actively looking for resource providers to make their resources accessible through the NIF. We offer a variety of methods for making resources searchable through the NIF. Collaborating institutions working on the current version of NIF include University of California, San Diego, California Institute of Technology, George Mason University, Yale University Medical College, and Washington University.
 
 
 
