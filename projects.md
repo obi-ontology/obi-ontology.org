@@ -49,6 +49,13 @@ The Common Fund Data Ecosystem (CFDE) (https://commonfund.nih.gov/dataecosystem)
 The goal of DDI project is to develop an ontology for the description of drug discovery investigations. The Pharmaceutical industry is an information based industry. The aim of DDI is to add value to the information generated in the drug pipeline by making the information easier to reuse, integrate, curate, retrieve, and reason with. DDI aims to follow to the Open Biomedical Ontologies Foundry (OBO) principles, to use relations laid down in the OBO Relation Ontology, and to be compliant with Ontology for biomedical investigations (OBI).
 
 
+### eagle-i
+
+[eagle-i.net](www.eagle-i.net)
+
+eagle-i is a resource discovery tool built to share information about research resources, giving any scientist, anywhere, access to one of the largest collections of information about Core Facilities, iPS cell lines, and other valuable, unique or rare scientific resources in the world.
+
+
 ### Eukaryotic Pathogen, Vector and Host Informatics Resources (VEuPathDB)
 
 [veupathdb.org](www.veupathdb.org)
@@ -78,6 +85,13 @@ Gemma is a web site, database and a set of tools for the meta-analysis, re-use a
 The Genomic Epidemiology Ontology (GenEpiO) project aims to develop a more comprehensive controlled vocabulary for infectious disease surveillance and outbreak investigations. To support foodborn disease informatics, FoodOn, an offshoot of GenEpiO and ENVO, describes food samples by organism, ingredient, packaging, food processing history etc.. GEEM is a software tool to take standards composed within ontologies according to OBI value specifications, and turn them into JSON, HTML form, and other formats for use in software to support data validation and exchange.
 
 
+### Human Brain Project
+
+ [humanbrainproject.eu/](https://www.humanbrainproject.eu/en/)
+ 
+The Human Brain Project (HBP) is building a research infrastructure to help advance neuroscience, medicine, and computing. It is one of four FET (Future and Emerging Technology) Flagships, the largest scientific projects ever  funded by the European Union. The 10-year Project began in 2013 and directly employs some 500 scientists at more than 100 universities, teaching hospitals, and research centres across Europe.
+
+
 ### Human Immunology Project Consortium (HIPC)
 
 [hipc.org](https://www.immuneprofiling.org/hipc)
@@ -91,6 +105,20 @@ The Human Immunology Project Consortium (HIPC) program was established in 2010 b
 [iedb.org](https://iedb.org)
 
 The Immune Epitope Database (IEDB) is a freely available resource funded by NIAID. It catalogs experimental data on antibody and T cell epitopes studied in humans, non-human primates, and other animal species in the context of infectious disease, allergy, autoimmunity and transplantation. The IEDB also hosts tools to assist in the prediction and analysis of epitopes.
+
+
+### Informed Consent Ontology (ICO)
+
+[](https://github.com/ICO-ontology/ICO)
+
+Informed Consent Ontology (ICO) represents the domain of informed consent, including: consent forms, policies governing informed consent, agents working with patients and biospecimens accompanied by consent, and the process of informed consent itself. ICO aims to support informed consent data integration and reasoning in the clinical research space.
+
+
+### Interlex
+
+[Interlex.org](https://scicrunch.org/scicrunch/interlex/dashboard)
+
+The InterLex project - a core component of SciCrunch and supported by projects such as the Neuroscience Information Framework project (NIF), the NIDDK Information Network (dkNET), and the Open Data Commons for Spinal Cord Injury - is a dynamic lexicon of biomedical terms. Unlike an encyclopedia, a lexicon provides the meaning of a term, and not all there is to know about it. InterLex is being constructed to help improve the way that biomedical scientists communicate about their data, so that information systems like NIF and dkNET can find data more easily and provide more powerful means of integrating that data across distributed resources.
 
 ### MicrobiomeDB: A Microbiome Resource 
 
@@ -106,4 +134,21 @@ MicrobiomeDB is a data-mining platform for interrogating microbiome experiments.
 The Neuroscience Information Framework (NIF) is a dynamic inventory of Web-based neuroscience resources, data, and tools accessible via any computer connected to the Internet. An initiative of the NIH Blueprint for Neuroscience Research, NIF advances neuroscience research by enabling discovery and access to public research data and tools worldwide through an open source, networked environment.The NIF project is designed to serve the biomedical research community. The more participation from the community, the better the NIF. We welcome all feedback and suggestions and are actively looking for resource providers to make their resources accessible through the NIF. We offer a variety of methods for making resources searchable through the NIF. Collaborating institutions working on the current version of NIF include University of California, San Diego, California Institute of Technology, George Mason University, Yale University Medical College, and Washington University.
 
 
+### SPARC.science
 
+[sparc.science](https://sparc.science/)
+
+The SPARC Portal is an international project funded by the NIH Common Fund’s SPARC program under OT3OD025349, OT3OD025348, and OT3OD025347. The SPARC Portal was created to help facilitate autonomic neuroscience research by hosting a growing collection of digital resources, including datasets, maps, and computational studies that focus on the role of the autonomic nervous system in controlling organ function. The resources available on the SPARC Portal are generated by SPARC program-supported research projects. Our long-term goal is to make this a resource the larger community can also contribute to. We are continually adding new datasets, maps, and computational studies to the site and are building new functionality to access and interact with those resources.
+
+
+### Vaccination Informed Consent Ontology (VICO)
+
+[VICO-ontology](https://github.com/VICO-ontology/VICO)
+
+VICO is an application ontology for vaccination/immunization informed consent built upon previously constructed ICO (Informed Consent Ontology) and VO (vaccine ontology). The goal of developing VICO is to organize vaccination informed consent-related entities and their relations to enable vaccination informed consent data standardization and integration. The current focus of VICO delevelopment is to represent different vaccination informed consent forms in such a way that it will support consistent representation of immunization questionnaires.
+
+### Vaccine Ontology
+
+[vaccineontology](http://www.violinet.org/vaccineontology/)
+
+The Vaccine Ontology (VO) is an ontology of vaccine and vaccination. VO utilizes the Basic Formal Ontology (BFO) and the Relation Ontology. Current focus is on vaccine categorization, vaccine components, vaccine quality, and vaccine-induced host responses. 
