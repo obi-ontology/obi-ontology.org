@@ -6,12 +6,27 @@ permalink: /projects/
 
 Contact us to add your ontology-driven project if it makes use of OBI!
 
+### Cell Line Ontology (CLO)
+
+[clo-ontology.org](http://www.clo-ontology.org/)
+
+The Cell Line Ontology (CLO) is a community-driven ontology that is developed to standardize and integrate cell line information and support computer-assisted reasoning. The CLO development has becoming a community effort with international collaborations. Our development consortium includes experts from all over the world: the USA, Europe, and Japan.
+
+
 ### Chemical Effects in Biological Systems (CEBS)
 
 [CEBS Search](https://manticore.niehs.nih.gov/cebssearch)
 
 
 The CEBS database houses data of interest to environmental health scientists. CEBS is a public resource, and has received depositions of data from academic, industrial, and governmental laboratories. CEBS is designed to display data in the context of biology and study design, and permit data integration across studies for novel meta analysis. OBI is used by CEBS to model studies, and improve search and analysis.
+
+
+### Chemical Methods Ontology (CHMO)
+
+[CHMO](https://github.com/rsc-ontologies/rsc-cmo)
+
+CHMO, the chemical methods ontology, describes methods used to collect data in chemical experiments, such as mass spectrometry and electron microscopy prepare and separate material for further analysis, such as sample ionisation, chromatography, and electrophoresis synthesise materials, such as epitaxy and continuous vapour deposition It also describes the instruments used in these experiments, such as mass spectrometers and chromatography columns. It is intended to be complementary to the Ontology for Biomedical Investigations (OBI).
+
 
 ### Clinical Epidemiology Resources (ClinEpiDB)
 
@@ -25,6 +40,13 @@ ClinEpiDB is an open-access online resource of population-based epidemiological 
 [nih-cfde.org](https://www.nih-cfde.org/)
 
 The Common Fund Data Ecosystem (CFDE) (https://commonfund.nih.gov/dataecosystem) is being developed to connect datasets, tools, and resources from the various Data Coordination Centers (DCCs) associated with Common Fund programs (e.g. HMP, KidsFirst, LINCS, GTEx, 4DN Nucleome, Metabolomics, SPARC, HubMAP, and MoTrPAC) This program will not only make the data more accessible but will facilitate cross-DCC queries and data analysis. As part of the CFDE, the CFDE Data Coordination Center provides a cloud-based infrastructure and a common metadata model to indefinitely house the data and tools associated with the Common Fund programs. The Coordination Center also provides a data query portal. The CFDE Coordination Center is using OBI assay terms to standardize metadata about the type of experiment that generated various datatypes (e.g. 16S amplicon sequence, whole genome sequence).
+
+
+### An Ontology for Drug Discovery Investigations (DDI)
+
+[DDI](http://code.google.com/p/ddi-ontology/)
+
+The goal of DDI project is to develop an ontology for the description of drug discovery investigations. The Pharmaceutical industry is an information based industry. The aim of DDI is to add value to the information generated in the drug pipeline by making the information easier to reuse, integrate, curate, retrieve, and reason with. DDI aims to follow to the Open Biomedical Ontologies Foundry (OBO) principles, to use relations laid down in the OBO Relation Ontology, and to be compliant with Ontology for biomedical investigations (OBI).
 
 
 ### Eukaryotic Pathogen, Vector and Host Informatics Resources (VEuPathDB)
