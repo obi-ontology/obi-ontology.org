@@ -56,6 +56,13 @@ The goal of DDI project is to develop an ontology for the description of drug di
 eagle-i is a resource discovery tool built to share information about research resources, giving any scientist, anywhere, access to one of the largest collections of information about Core Facilities, iPS cell lines, and other valuable, unique or rare scientific resources in the world.
 
 
+### eNanoMapper
+
+[eNanoMapper](https://github.com/enanomapper/ontologies)
+
+The eNanoMapper ontology covers the full scope of terminology needed to support research into nanomaterial safety. It builds on multiple pre-existing external ontologies such as the NanoParticle Ontology.
+
+
 ### Eukaryotic Pathogen, Vector and Host Informatics Resources (VEuPathDB)
 
 [veupathdb.org](www.veupathdb.org)
@@ -69,6 +76,14 @@ The Eukaryotic Pathogen, Vector and Host Informatics Resource (VEuPathDB) is a B
 
 The Evidence and Conclusion Ontology (ECO) has been developed to describe types of evidence and assertion methods. ECO terms are used in the process of biocuration to capture the evidence that supports biological assertions (e.g. gene product X has function Y as supported by evidence Z). The capture of evidence information allows tracking of annotation provenance, establishment of quality control measures, and precise query of annotations. ECO is in use by many leading biological resources including the Gene Ontology, UniProt and several model organism databases. ECO is freely available for download from GitHub (https://github.com/evidenceontology/) or the project's website (http://evidenceontology.org/).
 ECO and OBI have an ongoing collaboration to create terms in OBI that correspond to assays and protocols underlying terms in ECO. In addition, ECO uses logical axioms linking to OBI assay terms to precisely define ECO terms.
+
+
+### FAIRsharing
+
+[FAIRsharing](https://fairsharing.org)
+
+FAIRsharing (https://fairsharing.org) is an informative and educational resource for describing and interlinking community-driven standards, databases, repositories and data policies, bringing the producers and consumers of standards, databases, repositories and data policies closer together to enable resource discovery and reuse. OBI hierarchies relevant to FAIRsharing are imported in its subject (https://github.com/FAIRsharing/subject-ontology) and domain (DRAO, https://github.com/FAIRsharing/domain-ontology) application ontologies. These application ontologies are in use on the FAIRsharing website for record annotation and hierarchical searching.
+
 
 
 ### Gemma
