@@ -6,6 +6,19 @@ permalink: /projects/
 
 Contact us to add your ontology-driven project if it makes use of OBI!
 
+### Brucellosis Ontology (IDOBRU)
+
+[IDOBRU](http://www.ontobee.org/ontology/IDOBRU)
+
+IDOBRU ontologically represents different aspects of brucellosis, including the host infection, zoonotic disease transmission, symptoms, virulence factors and pathogenesis, diagnosis, intentional release, vaccine prevention, and treatment. IDOBRU is aligned with and imports terms from OBI, e.g., organism, PRC, specimen, specimen role, and planned process.
+
+
+### Cardiac Electrophysiology (CEP) Ontology
+
+[cvrgrid.org](http://www.cvrgrid.org)
+
+The Cardiac Electrophysiology Ontology contains terms describing single-channel electrophysiological experiments and data obtained using voltage-clamp, current clamp and fluorescence imaging techniques applied at the cell level and multi-channel fluorescence imaging techniques applied at the cell, tissue and whole heart levels. CEP uses OBI classes, particularly protocols and instrumentation.
+
 ### Cell Line Ontology (CLO)
 
 [clo-ontology.org](http://www.clo-ontology.org/)
@@ -78,6 +91,13 @@ The Evidence and Conclusion Ontology (ECO) has been developed to describe types 
 ECO and OBI have an ongoing collaboration to create terms in OBI that correspond to assays and protocols underlying terms in ECO. In addition, ECO uses logical axioms linking to OBI assay terms to precisely define ECO terms.
 
 
+### Experimental Factor Ontology (EFO)
+
+[EFO](http://www.ebi.ac.uk/efo/)
+
+The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, and Cell Ontology. The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets.
+
+
 ### FAIRsharing
 
 [FAIRsharing](https://fairsharing.org)
@@ -134,6 +154,14 @@ Informed Consent Ontology (ICO) represents the domain of informed consent, inclu
 [Interlex.org](https://scicrunch.org/scicrunch/interlex/dashboard)
 
 The InterLex project - a core component of SciCrunch and supported by projects such as the Neuroscience Information Framework project (NIF), the NIDDK Information Network (dkNET), and the Open Data Commons for Spinal Cord Injury - is a dynamic lexicon of biomedical terms. Unlike an encyclopedia, a lexicon provides the meaning of a term, and not all there is to know about it. InterLex is being constructed to help improve the way that biomedical scientists communicate about their data, so that information systems like NIF and dkNET can find data more easily and provide more powerful means of integrating that data across distributed resources.
+
+
+### The Investigation / Study / Assay (ISA) tab-delimited (TAB)
+
+[ISA-Tools](https://isa-tools.org/)
+
+The ISA (Investigation/Study/Assay) infrastructure is a user-friendly multi-domain data capture and management suite that allows the searching of OBI for terms to use in data entry. The ISA infrastructure is also part of the ELIXIR UK node interoperability components of the EXCELERATE project. Built around the 'Investigation' (the project context), 'Study' (a unit of research) and 'Assay' (analytical measurement) data model and serializations (tabular, JSON and RDF), the ISA framework helps you to provide rich description of the experimental metadata (i.e. sample characteristics, technology and measurement types, sample-to-data relationships) so that the resulting data and discoveries are reproducible and reusable.
+
 
 ### MicrobiomeDB: A Microbiome Resource 
 
