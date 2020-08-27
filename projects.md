@@ -76,6 +76,13 @@ eagle-i is a resource discovery tool built to share information about research r
 The eNanoMapper ontology covers the full scope of terminology needed to support research into nanomaterial safety. It builds on multiple pre-existing external ontologies such as the NanoParticle Ontology.
 
 
+### The Encyclopedia of DNA Elements (ENCODE)
+
+[ENCODE](https://www.encodeproject.org/)
+
+ENCODE is a comprehensive parts list of functional elements in the human genome, including elements that act at the protein and RNA levels, and regulatory elements that control cells and circumstances in which a gene is active. OBI is used for assay annotations that are used in search and data validation.
+
+
 ### Eukaryotic Pathogen, Vector and Host Informatics Resources (VEuPathDB)
 
 [veupathdb.org](www.veupathdb.org)
@@ -170,11 +177,24 @@ The ISA (Investigation/Study/Assay) infrastructure is a user-friendly multi-doma
 MicrobiomeDB is a data-mining platform for interrogating microbiome experiments. MicrobiomeDB was developed as a discovery tool that empowers researchers to fully leverage their experimental metadata to construct queries that interrogate microbiome datasets. It is associated with VEuPathDB uses the OBI-based VEuPathDB ontology. Partial support for MicrobiomeDB has come from the Bill & Melinda Gates Foundation
 
 
+### National Center for Biomedical Ontology (NCBO) Annotator
+
+[NCBO Annotator](http://www.bioontology.org/annotator-service)
+
+The NCBO Annotator is a Web service that annotates textual data (for example journal abstracts) with relevant ontology terms. Terms from OBI are used to annotate experimental protocols and research publications to tag references to experimental methods, equipment, samples, and other types of investigation-relevant entities. The NCBO Ontology Recommender Service suggests that users adopt OBI when it is appropriate for their work.
+
+
 ### Neuroscience Information Framework
 
 [neuinfo.org](http://neuinfo.org)
 
 The Neuroscience Information Framework (NIF) is a dynamic inventory of Web-based neuroscience resources, data, and tools accessible via any computer connected to the Internet. An initiative of the NIH Blueprint for Neuroscience Research, NIF advances neuroscience research by enabling discovery and access to public research data and tools worldwide through an open source, networked environment.The NIF project is designed to serve the biomedical research community. The more participation from the community, the better the NIF. We welcome all feedback and suggestions and are actively looking for resource providers to make their resources accessible through the NIF. We offer a variety of methods for making resources searchable through the NIF. Collaborating institutions working on the current version of NIF include University of California, San Diego, California Institute of Technology, George Mason University, Yale University Medical College, and Washington University.
+
+### Ontology for Biological and Clinical Statistics (OBCS)
+
+[OBCS](https://github.com/obcs/obcs)
+
+The Ontology of Biological and Clinical Statistics (OBCS) is a biomedical ontology in the domain of biological and clinical statistics. OBCS is primarily targeted for statistical term representation in the fields in biological, biomedical, and clinical domains. OBCS imports statistics-related OBI terms, uses OBI as a middle tier ontology, and then adds many new statistics related terms, especially those used in biological, biomedical, and clinical fields.
 
 
 ### SPARC.science
