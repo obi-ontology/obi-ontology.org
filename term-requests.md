@@ -36,6 +36,14 @@ When you’ve collected as much of this information as possible, please follow t
 
 <https://github.com/obi-ontology/obi/issues/new>
 
+
+### Term Templates
+
+For large sets of new terms, we suggest using our term templates to standardize your requests. These exist in a spreadsheet format to allow for consistancy across a large number of new terms. Currently, there are termplates for assay, device, study design, and more. 
+Templates can be found here <https://github.com/obi-ontology/obi/tree/master/src/ontology/templates>
+
+If you require a new template for your project, please contact us for assistance.
+
 ## More Details
 
 OBI belongs to the [OBO Foundry](http://obofoundry.org/) and strives to follow the [OBO Foundry Principles](http://www.obofoundry.org/principles/fp-000-summary.html). Here are some more details about the information we require for each new term.
