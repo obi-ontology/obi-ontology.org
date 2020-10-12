@@ -58,6 +58,6 @@ Please cite [The Ontology for Biomedical Investigations](https://www.ncbi.nlm.ni
 - OBI developers mailing list [obi-devel@lists.sourceforge.net](mailto:obi-devel@lists.sourceforge.net) ([subscription form](https://sourceforge.net/projects/obi/lists/obi-devel))
 - issue tracker: <https://github.com/obi-ontology/obi/issues>
 - weekly conference call, Mondays at 9:00 AM Pacific, 12:00 noon Eastern
-    - Zoom web conference <https://zoom.us/j/438753421>
-    - by phone: +1 408 638 0968 (US Toll) or +1 646 558 8656 (US Toll), Meeting ID: 438 753 421, [International numbers available](https://zoom.us/u/MQm7aCi0)
+    - Zoom web conference <https://us02web.zoom.us/j/82952846229?pwd=UXkwZ3RmU1VZUEM3bDlNS1RsSzNzdz09>
+    - by phone: +1 408 638 0968 (US Toll) or +1 646 558 8656 (US Toll), Meeting ID: 829 5284 6229, Passcode: 535959 [International numbers available](https://zoom.us/u/MQm7aCi0)
     - [weekly agenda Google Doc](https://docs.google.com/document/d/1eEutJAG56gncTsWf2sAqHa4a9pQAuCbhsg_kmbF78tw/edit#heading=h.5bzhi4qntq5l)
