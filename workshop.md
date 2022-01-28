@@ -8,7 +8,7 @@ permalink: /2022-Workshop/
 ## 2022 OBI Workshop
 
 - When: January 31 - February 2nd 2022, 8am - 12pm Pacific Time
-- Where: online via zoom https://lji-org.zoom.us/j/82952846229?pwd=UXkwZ3RmU1VZUEM3bDlNS1RsSzNzdz09
+- Where: online via Zoom. You can find the link [here](https://lji-org.zoom.us/j/82952846229?pwd=UXkwZ3RmU1VZUEM3bDlNS1RsSzNzdz09)
 - Why: The purpose of this workshop is to do hands-on, collaborative work, to solve three interrelated problems on how to represent specific elements of scientific investigations in OBI.
 
 **Agenda**
