@@ -15,6 +15,8 @@ This user manual is designed to explain the core functionality of OBI for newcom
 
 - **[ROBOT Templates](/docs/robot-intro)**: design patterns for certain branches of OBI
 
+We are also developing a guide called ["Ontology Curator Pathway: OBI-style"](https://oboacademy.github.io/obook/pathways/ontology-curator-obi-style/) at the OBO Semantic Engineering Training site.
+ 
 More background and detail on OBI terms and functionality is available in papers listed on the [Media](/media/) page.
 
 We prefer to use [draw.io](http://draw.io) for diagrams, and we store both the source code and resulting image in the GitHub repository for this site. A few visual design principles are at work: The diagrams usually skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.  Process inputs and outputs generally flow left to right; superclass/subclass is-a relations are vertical, and upper-level categories of entity are color-coded.
